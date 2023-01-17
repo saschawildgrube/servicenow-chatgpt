@@ -17,7 +17,13 @@
 	<p>Welcome to the "ChatGPT" app for ServiceNow - created and maintained by&#160;<a href="mailto:sascha.wildgrube@servicenow.com">Sascha Wildgrube</a>.</p>
 
 	<h2>Features</h2> 
-	<p>Connect to the OpenAI API and communicate with OpenAI's ChatGPT. Start with the script include function x_snc_chat_gpt.ChatGPT().</p>
+	<p>Connect to the OpenAI API and communicate with OpenAI's ChatGPT.</p>
+	<p>Start with the script include function x_snc_chat_gpt.ChatGPT().</p>
+	<p>Perform the installation instructions below!</p>
+	<p>Go to the background scripts and execute this:</p>
+	<pre>
+		gs.info(x_snc_chat_gpt.ChatGPT("Say something smart"));
+	</pre>
 
 	<h2>Disclaimer</h2>
 	<g2:no_escape>$[docapi.RenderDisclaimer()]</g2:no_escape>	
@@ -58,15 +64,16 @@
 	<h3>Configuration Options</h3>
 	<g2:no_escape>$[docapi.RenderProperties()]</g2:no_escape>
 	
+<!--	
 	<h3>Roles</h3>
 	<g2:no_escape>$[docapi.RenderRoles()]</g2:no_escape>		
 	<h3>UI Actions</h3>
 	<g2:no_escape>$[docapi.RenderUIActions()]</g2:no_escape>		
-	
-<!--	
+-->	
+
 	<h3>Script Includes</h3>
 	<g2:no_escape>$[docapi.RenderScriptIncludes()]</g2:no_escape>
--->	
+<!--	
 	<h3>UI Scripts</h3>
 	<g2:no_escape>$[docapi.RenderUIScripts()]</g2:no_escape>	
 	
@@ -90,7 +97,7 @@
 		<li>TODO: document changes here</li>
 	</ol>
 -->
-	<h3>1.0.0 - 2023-TODO</h3>
+	<h3>1.0.0 - 2023-01-17</h3>
 	<p>First baselined version</p>
 
 <span style="visibility: hidden;">_CUT_HERE_</span>
@@ -102,13 +109,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-17 07:00:28</sys_created_on>
         <sys_id>95f96337dbd0e1106a03dad1f3961977</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_ui_page_95f96337dbd0e1106a03dad1f3961977</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-01-17 07:41:09</sys_updated_on>
+        <sys_updated_on>2023-01-17 07:53:35</sys_updated_on>
     </sys_ui_page>
 </record_update>

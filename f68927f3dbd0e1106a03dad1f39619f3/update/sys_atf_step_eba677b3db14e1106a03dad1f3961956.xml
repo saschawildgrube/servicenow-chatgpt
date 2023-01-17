@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Performs sanity checks on the scoped app: ChatGPT
+</description>
+        <display_name>DevTools - Check scoped app sanity</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <snapshot/>
+        <step_config display_value="DevTools - Check scoped app sanity">786a921f1b6c2090a89720a8ec4bcbc9</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-17 07:56:07</sys_created_on>
+        <sys_id>eba677b3db14e1106a03dad1f3961956</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevTools - Check scoped app sanity</sys_name>
+        <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_atf_step_eba677b3db14e1106a03dad1f3961956</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-17 07:56:07</sys_updated_on>
+        <table/>
+        <test display_value="Chat GPT - Implementation">6df96337dbd0e1106a03dad1f39619b1</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=eba677b3db14e1106a03dad1f3961956"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>eba677b3db14e1106a03dad1f3961956</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-17 07:56:07</sys_created_on>
+        <sys_id>3cb6b7b3db14e1106a03dad1f3961900</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-17 07:56:07</sys_updated_on>
+        <value>f68927f3dbd0e1106a03dad1f39619f3</value>
+        <variable display_value="Application">8a0aaa9f1bac2090a89720a8ec4bcbc8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_786a921f1b6c2090a89720a8ec4bcbc9^id=eba677b3db14e1106a03dad1f3961956"/>
+</record_update>
