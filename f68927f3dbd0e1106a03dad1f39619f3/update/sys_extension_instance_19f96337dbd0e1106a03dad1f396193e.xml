@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_extension_instance">
+    <sys_extension_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <order>100</order>
+        <point>x_snc_devtools.DevTools</point>
+        <script_include display_value="DevTools">5df96337dbd0e1106a03dad1f396193a</script_include>
+        <sys_class_name>sys_extension_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-17 07:00:27</sys_created_on>
+        <sys_id>19f96337dbd0e1106a03dad1f396193e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_devtools.DevTools</sys_name>
+        <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_extension_instance_19f96337dbd0e1106a03dad1f396193e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-17 07:00:27</sys_updated_on>
+    </sys_extension_instance>
+</record_update>

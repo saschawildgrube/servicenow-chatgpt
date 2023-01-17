@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>Debug=debug,Info=info,Warn=warn,Error=error</choices>
+        <description>Controls the verbosity of log output produced by the Chat GPT application.</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_chat_gpt.logging.verbosity</name>
+        <read_roles/>
+        <suffix>logging.verbosity</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-17 07:00:24</sys_created_on>
+        <sys_id>ecf92337dbd0e1106a03dad1f3961974</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_chat_gpt.logging.verbosity</sys_name>
+        <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_properties_ecf92337dbd0e1106a03dad1f3961974</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-17 07:00:24</sys_updated_on>
+        <type>choicelist</type>
+        <value>info</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=ecf92337dbd0e1106a03dad1f3961974"/>
+</record_update>
