@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_chat_gpt.DevToolsGetApplicationStatus</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>The function DevToolsGetApplicationStatus is called by the DevTools extension point instance class and returns the application status object with additional status information to be displayed on the "DevTools Application Overview" page.</description>
+        <name>DevToolsGetApplicationStatus</name>
+        <script><![CDATA[function DevToolsGetApplicationStatus(status)
+{
+	var GetValue = x_snc_devtools.GetValue;
+	var SetValue = x_snc_devtools.SetValue;
+	var GetKeys = x_snc_devtools.GetKeys;
+	var GetAppRecord = x_snc_devtools.GetAppRecord;
+	
+	/*
+	// Define a new column 'demo'
+	SetValue('Demo',status,'columns','demo','header');
+	
+	var aApps = GetKeys(GetValue(status,'applications'));
+	for (var nApp = 0; nApp < aApps.length; nApp++)
+	{
+		var grApp = GetAppRecord(aApps[nApp]);
+		// Add some meaningful status information or useful links for each app:
+		SetValue('Add some relevant info about app '+grApp.name,status,'applications',aApps[nApp],'demo');
+	}
+	*/
+	
+	return status;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-17 07:00:28</sys_created_on>
+        <sys_id>5df96337dbd0e1106a03dad1f3961963</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>DevToolsGetApplicationStatus</sys_name>
+        <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_script_include_5df96337dbd0e1106a03dad1f3961963</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-17 07:07:28</sys_updated_on>
+    </sys_script_include>
+</record_update>
