@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_snc_chat_gpt.user" name="x_snc_chat_gpt.user">dfdef4191b7c25105b76777d8b4bcb30</contains>
+        <role display_value="x_snc_chat_gpt.admin" name="x_snc_chat_gpt.admin">fae559911bfc25105b76777d8b4bcb8c</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-03 20:42:38</sys_created_on>
+        <sys_id>2e29c2a51bb0a5105b76777d8b4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_chat_gpt.user.x_snc_chat_gpt.admin</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_user_role_contains_2e29c2a51bb0a5105b76777d8b4bcbcc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-03 20:42:38</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>
