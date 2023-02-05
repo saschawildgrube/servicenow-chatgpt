@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="title" label="Title" language="en" table="x_snc_chat_gpt_conversation">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>title</element>
+            <help/>
+            <hint/>
+            <label>Title</label>
+            <language>en</language>
+            <name>x_snc_chat_gpt_conversation</name>
+            <plural>Titles</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-03 20:22:15</sys_created_on>
+            <sys_id>7b748a211bb0a5105b76777d8b4bcbec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Title</sys_name>
+            <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_chat_gpt_conversation_title_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-03 20:22:15</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

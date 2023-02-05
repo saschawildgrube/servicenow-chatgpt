@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_chat_gpt.GetOrCreateConversationRecord</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns a new or existing GlideRecord object representing a Chat GPT conversation based.</description>
+        <name>GetOrCreateConversationRecord</name>
+        <script><![CDATA[function GetOrCreateConversationRecord(vConversation)
+{
+	var GetRecord = x_snc_devtools.GetRecord;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	
+	if (IsValidRecord(vConversation) == true)
+	{
+		if (vConversation.getRecordClassName() == 'x_snc_chat_gpt_conversation')
+		{
+			return vConversation;
+		}
+	}
+	
+	var grConversation = GetRecord('x_snc_chat_gpt_conversation',vConversation);
+	if (grConversation == false)
+	{
+		grConversation = new GlideRecord('x_snc_chat_gpt_conversation');
+		grConversation.initialize();
+		grConversation.insert();
+	}
+	return grConversation;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-02 22:09:40</sys_created_on>
+        <sys_id>2f7399dd1bbc25105b76777d8b4bcbca</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GetOrCreateConversationRecord</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_script_include_2f7399dd1bbc25105b76777d8b4bcbca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-02 22:18:20</sys_updated_on>
+    </sys_script_include>
+</record_update>
