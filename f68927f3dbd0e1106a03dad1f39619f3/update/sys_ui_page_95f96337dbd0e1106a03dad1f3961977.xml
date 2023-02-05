@@ -100,7 +100,7 @@
 	</ol>
 -->
 	
-	<h3>2.0.0 - 2023-TODO</h3>
+	<h3>2.0.0 - 2023-02-05</h3>
 	<ol>
 		<li>Backward incompatible change: Renamed function ChatGPT() to Prompt().</li>
 		<li>DevTools 1.55.0 is now required.</li>
@@ -121,13 +121,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-17 07:00:28</sys_created_on>
         <sys_id>95f96337dbd0e1106a03dad1f3961977</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>manual</sys_name>
-        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
-        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_ui_page_95f96337dbd0e1106a03dad1f3961977</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-05 10:48:35</sys_updated_on>
+        <sys_updated_on>2023-02-05 21:58:09</sys_updated_on>
     </sys_ui_page>
 </record_update>
