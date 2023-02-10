@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="title" table="x_snc_chat_gpt_conversation">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="new_prompt" table="x_snc_chat_gpt_conversation">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Title</column_label>
+        <column_label>New Prompt</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -22,19 +22,19 @@
         <delete_roles/>
         <dependent/>
         <dependent_on_field/>
-        <display>true</display>
+        <display>false</display>
         <dynamic_creation>false</dynamic_creation>
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>title</element>
+        <element>new_prompt</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>200</max_length>
+        <max_length>4000</max_length>
         <name>x_snc_chat_gpt_conversation</name>
         <next_element/>
         <primary>false</primary>
@@ -52,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-03 20:22:14</sys_created_on>
-        <sys_id>4a5486211bb0a5105b76777d8b4bcb47</sys_id>
+        <sys_created_on>2023-02-09 17:14:41</sys_created_on>
+        <sys_id>420350271bf86d105b76777d8b4bcbb8</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name>Title</sys_name>
+        <sys_name>New Prompt</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name>sys_dictionary_x_snc_chat_gpt_conversation_title</sys_update_name>
+        <sys_update_name>sys_dictionary_x_snc_chat_gpt_conversation_new_prompt</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-09 18:30:33</sys_updated_on>
+        <sys_updated_on>2023-02-09 22:14:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

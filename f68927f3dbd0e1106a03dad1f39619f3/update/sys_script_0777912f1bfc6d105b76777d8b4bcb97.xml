@@ -18,8 +18,8 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Conversation Set Title</name>
-        <order>110</order>
+        <name>Conversation Prompt</name>
+        <order>100</order>
         <priority>100</priority>
         <rest_method/>
         <rest_method_text/>
@@ -30,41 +30,37 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
 	var GetStringValue = x_snc_devtools.GetStringValue;
-	var GetValue = x_snc_devtools.GetValue;	
+
+	var strPrompt = GetStringValue(current.prompt);
 	
-	var strDefaultTitle = 'New conversation';
-	var strNewPrompt = GetStringValue(current.prompt);
-	
-	var strTitle = GetStringValue(current.title);
-	if (strTitle == '' || strTitle == strDefaultTitle)
+	if (strPrompt != '')
 	{
-		strTitle = strNewPrompt;
-		if (strTitle == '')
+		var strAnswer = ConversationPrompt(current.sys_id,strPrompt);
+		if (strAnswer != false)
 		{
-			strTitle = strDefaultTitle;
+			current.answer = strAnswer;
 		}
 	}
-	current.title = strTitle;
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-02 21:44:47</sys_created_on>
+        <sys_created_on>2023-02-09 22:14:38</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>ca7d4d591bbc25105b76777d8b4bcb92</sys_id>
-        <sys_mod_count>15</sys_mod_count>
-        <sys_name>Conversation Set Title</sys_name>
+        <sys_id>0777912f1bfc6d105b76777d8b4bcb97</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Conversation Prompt</sys_name>
         <sys_overrides/>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name>sys_script_ca7d4d591bbc25105b76777d8b4bcb92</sys_update_name>
+        <sys_update_name>sys_script_0777912f1bfc6d105b76777d8b4bcb97</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-09 19:03:00</sys_updated_on>
+        <sys_updated_on>2023-02-09 22:18:38</sys_updated_on>
         <template/>
         <when>before</when>
         <x_snc_datasilos_created>false</x_snc_datasilos_created>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=ca7d4d591bbc25105b76777d8b4bcb92"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=0777912f1bfc6d105b76777d8b4bcb97"/>
 </record_update>

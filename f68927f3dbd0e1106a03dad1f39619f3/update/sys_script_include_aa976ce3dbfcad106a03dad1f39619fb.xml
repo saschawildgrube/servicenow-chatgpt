@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_chat_gpt.ConversationPrompt</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Sends a prompt to the ChatGPT engine using a given conversation as context.</description>
+        <name>ConversationPrompt</name>
+        <script><![CDATA[function ConversationPrompt(vConversation, strPrompt)
+{
+	if (IsActive() == false)
+	{
+		return false;
+	}
+	
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var RenderValue = x_snc_devtools.RenderValue;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetUserRecord = x_snc_devtools.GetUserRecord;
+	var UserImpersonate = x_snc_devtools.UserImpersonate;
+	
+	var strPrompt = GetStringValue(strPrompt);
+	var strFullConversationPrompt = '';
+	
+	
+	var grConversation = GetConversationRecord(vConversation);
+	if (IsValidRecord(grConversation) == false)
+	{
+		return false;
+	}
+
+	var strContext = GetStringValue(grConversation.context);
+	if (strContext != '')
+	{
+		strFullConversationPrompt = strContext + '\nQ: ' + strPrompt;
+	}
+	else
+	{
+		strFullConversationPrompt = 'Q: '+strPrompt;
+	}
+	grConversation.new_prompt = '';
+	grConversation.update();		
+	
+	var strAnswer = Prompt(strFullConversationPrompt);
+	
+	if (strAnswer == '')
+	{
+		return false;
+	}
+
+	var user = gs.getUser();
+	var grChatGPTUser = GetUserRecord('chatgpt');
+	if (IsValidRecord(grChatGPTUser))
+	{
+		//Debug('Impersonating: '+RenderValue(UserImpersonate(grChatGPTUser.sys_id)));
+	}
+	var grConversation = GetConversationRecord(vConversation);
+	if (IsValidRecord(grConversation) == false)
+	{
+		return false;
+	}
+	grConversation.answer = strAnswer;
+	grConversation.update();
+
+	//UserImpersonate(user.getID());
+	
+	var grConversation = GetConversationRecord(vConversation);
+	grConversation.context = strFullConversationPrompt + '\nA: ' + strAnswer ;
+	grConversation.update();
+
+	
+	return strAnswer;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-09 18:44:13</sys_created_on>
+        <sys_id>aa976ce3dbfcad106a03dad1f39619fb</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>ConversationPrompt</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_script_include_aa976ce3dbfcad106a03dad1f39619fb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-09 22:17:18</sys_updated_on>
+    </sys_script_include>
+</record_update>
