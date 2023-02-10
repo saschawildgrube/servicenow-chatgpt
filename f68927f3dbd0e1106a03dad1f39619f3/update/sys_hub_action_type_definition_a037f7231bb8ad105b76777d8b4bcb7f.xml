@@ -15,26 +15,26 @@
         <internal_name>ask_question_about_records</internal_name>
         <label_cache>[{"name":"{{action.records}}","label":"action➛Records","type":"action","ref":"","reference_display":"Knowledge","base_type":"records","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.question}}","label":"action➛Question","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].answer}}","label":"step➛Script step➛answer","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"7f452837-4722-495f-aafa-a72171733eb5"}}]</label_cache>
         <master_snapshot>12593fa31bb8ad105b76777d8b4bcbe2</master_snapshot>
-        <name>Ask question about knowledge base article</name>
+        <name>Ask a question about a knowledge base article</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <state>published</state>
+        <state>draft</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:51:13</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a037f7231bb8ad105b76777d8b4bcb7f</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Ask question about knowledge base article</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Ask a question about a knowledge base article</sys_name>
         <sys_overrides/>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a037f7231bb8ad105b76777d8b4bcb7f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:39</sys_updated_on>
+        <sys_updated_on>2023-02-10 10:12:37</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -107,7 +107,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT INcb383b631bb8ad105b76777d8b4bcb1d"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Ask question about knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</action>
+        <action display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</action>
         <cid>954a84ae-9b66-4c3e-bb2b-48383e9f963c</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -524,7 +524,7 @@
         <label>Question</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Ask question about knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f</name>
@@ -606,7 +606,7 @@
         <label>Records</label>
         <mandatory>true</mandatory>
         <max_length>1024</max_length>
-        <model display_value="Ask question about knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f</name>
@@ -691,7 +691,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Ask question about knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f</name>
@@ -776,7 +776,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Ask question about knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f</name>
@@ -861,7 +861,7 @@
         <label>Answer</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Ask question about knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f</name>
@@ -908,7 +908,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=a037f7231bb8ad105b76777d8b4bcb7f"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN9f383b631bb8ad105b76777d8b4bcb4d"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Ask question about knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</action_type_id>
+        <action_type_id display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</action_type_id>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:47</sys_created_on>
         <sys_id>9f383b631bb8ad105b76777d8b4bcb4d</sys_id>
@@ -1038,7 +1038,7 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f"/>
     <sys_hub_action_plan action="delete_multiple" query="action_id=a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN3e597fa31bb8ad105b76777d8b4bcbf6"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="Ask question about knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</action_id>
+        <action_id display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"3e597fa31bb8ad105b76777d8b4bcbf6","name":"plan","plan_signature":null}}</plan>
         <snapshot>6a597fa31bb8ad105b76777d8b4bcb82</snapshot>
         <sys_created_by>admin</sys_created_by>
@@ -1070,7 +1070,7 @@
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="Ask question about knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</parent_action>
+        <parent_action display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:37</sys_created_on>
