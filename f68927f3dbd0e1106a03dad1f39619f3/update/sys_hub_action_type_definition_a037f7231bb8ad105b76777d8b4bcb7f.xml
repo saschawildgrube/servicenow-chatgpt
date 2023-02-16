@@ -13,9 +13,9 @@
         <description>Extracts relevant information from records and asks ChatGPT a question about that information.</description>
         <ih_action>false</ih_action>
         <internal_name>ask_question_about_records</internal_name>
-        <label_cache>[{"name":"{{action.records}}","label":"action➛Records","type":"action","ref":"","reference_display":"Knowledge","base_type":"records","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.question}}","label":"action➛Question","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].answer}}","label":"step➛Script step➛answer","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"7f452837-4722-495f-aafa-a72171733eb5"}}]</label_cache>
+        <label_cache>[{"name":"{{action.record}}","label":"action➛Records","type":"action","ref":"","reference_display":"Knowledge","base_type":"glide_list","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.question}}","label":"action➛Question","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.record.Records_0}}","label":"action➛Records (Comma separated Sys Ids)➛Records_0","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.records}}","label":"action➛Records (Comma separated Sys Ids)","type":"action","ref":"kb_knowledge","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"List","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"glide_list","uiUniqueId":"c80f77d5-d4a8-41e1-9f8d-588805e7cdce"}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].answer}}","label":"step➛Script step➛Answer","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"7f452837-4722-495f-aafa-a72171733eb5"}}]</label_cache>
         <master_snapshot>12593fa31bb8ad105b76777d8b4bcbe2</master_snapshot>
-        <name>Ask a question about a knowledge base article</name>
+        <name>Ask a question about a set of knowledge base articles</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -26,15 +26,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a037f7231bb8ad105b76777d8b4bcb7f</sys_id>
-        <sys_mod_count>9</sys_mod_count>
-        <sys_name>Ask a question about a knowledge base article</sys_name>
+        <sys_mod_count>68</sys_mod_count>
+        <sys_name>Ask a question about a set of knowledge base articles</sys_name>
         <sys_overrides/>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a037f7231bb8ad105b76777d8b4bcb7f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:12:37</sys_updated_on>
+        <sys_updated_on>2023-02-14 15:25:21</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -107,7 +107,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT INcb383b631bb8ad105b76777d8b4bcb1d"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</action>
+        <action display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</action>
         <cid>954a84ae-9b66-4c3e-bb2b-48383e9f963c</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -123,10 +123,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>cb383b631bb8ad105b76777d8b4bcb1d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+        <sys_updated_on>2023-02-14 15:25:21</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cb383b631bb8ad105b76777d8b4bcb1d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -151,14 +151,24 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>db383b631bb8ad105b76777d8b4bcb42</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+        <sys_updated_on>2023-02-14 15:25:21</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
-  gs.info(x_snc_devtools.RenderValue(inputs.records));
-  outputs.answer = PromptQuestionAboutRecords(inputs.records,inputs.question);
+  var aRecordSysIds = x_snc_devtools.GetArrayValue(inputs.records);
   
+  var aRecords = [];
+  for (var nRecord = 0; nRecord &lt; aRecordSysIds.length; nRecord++)
+  {
+     var grRecord = x_snc_devtools.GetRecord('kb_knowledge',aRecordSysIds[nRecord]);
+     if (x_snc_devtools.IsValidRecord(grRecord) == true)
+     {
+        aRecords.push(grRecord);
+     }
+  }
+  outputs.answer = PromptQuestionAboutRecords(aRecords,inputs.question);
+
 })(inputs, outputs);
 </value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -189,14 +199,26 @@
         <value>{{action.question}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>cb383b631bb8ad105b76777d8b4bcb1d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-10 16:56:43</sys_created_on>
+        <sys_id>21989df31b30ed105b76777d8b4bcb3e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-10 17:01:16</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cb383b631bb8ad105b76777d8b4bcb1d</table>
+        <value>{{action.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>records</field>
         <id>cb383b631bb8ad105b76777d8b4bcb1d</id>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>9b383b631bb8ad105b76777d8b4bcb43</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+        <sys_updated_on>2023-02-14 14:35:20</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_cb383b631bb8ad105b76777d8b4bcb1d</table>
         <value>{{action.records}}</value>
     </sys_element_mapping>
@@ -214,7 +236,7 @@
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_cb383b631bb8ad105b76777d8b4bcb1d^id=cb383b631bb8ad105b76777d8b4bcb1d"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=cb383b631bb8ad105b76777d8b4bcb1d"/>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=cb383b631bb8ad105b76777d8b4bcb1d^sys_idNOT IN03383b631bb8ad105b76777d8b4bcb36,4f383b631bb8ad105b76777d8b4bcb25"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=cb383b631bb8ad105b76777d8b4bcb1d^sys_idNOT IN03383b631bb8ad105b76777d8b4bcb36,e6d8a5491b8525505b76777d8b4bcb40"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -259,7 +281,7 @@
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_input_cb383b631bb8ad105b76777d8b4bcb1d</name>
         <next_element/>
-        <order>100</order>
+        <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -277,14 +299,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>03383b631bb8ad105b76777d8b4bcb36</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+        <sys_updated_on>2023-02-14 14:42:49</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -300,7 +322,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -331,20 +353,20 @@
         <function_field>false</function_field>
         <help/>
         <hint/>
-        <internal_type display_value="Records">records</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <label/>
         <mandatory>true</mandatory>
-        <max_length>1024</max_length>
+        <max_length>8000</max_length>
         <model display_value="Script step">cb383b631bb8ad105b76777d8b4bcb1d</model>
         <model_id>cb383b631bb8ad105b76777d8b4bcb1d</model_id>
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_input_cb383b631bb8ad105b76777d8b4bcb1d</name>
         <next_element/>
-        <order>0</order>
+        <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="kb_knowledge">kb_knowledge</reference>
+        <reference/>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -356,16 +378,16 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_step_ext_input</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 09:55:46</sys_created_on>
-        <sys_id>4f383b631bb8ad105b76777d8b4bcb25</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2023-02-14 15:20:12</sys_created_on>
+        <sys_id>e6d8a5491b8525505b76777d8b4bcb40</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+        <sys_updated_on>2023-02-14 15:20:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -414,7 +436,7 @@
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>answer</label>
+        <label>Answer</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Script step">cb383b631bb8ad105b76777d8b4bcb1d</model>
@@ -440,14 +462,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>c7383b631bb8ad105b76777d8b4bcb39</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:32</sys_updated_on>
+        <sys_updated_on>2023-02-14 15:22:57</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -465,7 +487,7 @@
         <element>answer</element>
         <help/>
         <hint/>
-        <label>answer</label>
+        <label>Answer</label>
         <language>en</language>
         <name>var__m_sys_hub_step_ext_output_cb383b631bb8ad105b76777d8b4bcb1d</name>
         <plural/>
@@ -473,18 +495,18 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>d7383b631bb8ad105b76777d8b4bcb3d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+        <sys_updated_on>2023-02-14 15:22:57</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_hub_action_input action="delete_multiple" query="model=a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN0338f7631bb8ad105b76777d8b4bcbff,0738f7631bb8ad105b76777d8b4bcbf6"/>
+    <sys_hub_action_input action="delete_multiple" query="model=a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN0338f7631bb8ad105b76777d8b4bcbff,5241a1811b8525505b76777d8b4bcba7"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -524,12 +546,12 @@
         <label>Question</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <model display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f</name>
         <next_element/>
-        <order>2</order>
+        <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -547,14 +569,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>0338f7631bb8ad105b76777d8b4bcbff</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+        <sys_updated_on>2023-02-10 17:00:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -571,7 +593,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=627b3b6a-3ae1-4461-8607-55e423a46770</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c80f77d5-d4a8-41e1-9f8d-588805e7cdce</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -581,7 +603,7 @@
 })(current);]]></calculation>
         <choice/>
         <choice_field/>
-        <choice_table>kb_knowledge</choice_table>
+        <choice_table/>
         <column_label/>
         <comments/>
         <create_roles/>
@@ -602,20 +624,20 @@
         <function_field>false</function_field>
         <help/>
         <hint/>
-        <internal_type display_value="Records">records</internal_type>
-        <label>Records</label>
+        <internal_type display_value="String">string</internal_type>
+        <label>Records (Comma separated Sys Ids)</label>
         <mandatory>true</mandatory>
-        <max_length>1024</max_length>
-        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <max_length>8000</max_length>
+        <model display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f</name>
         <next_element/>
-        <order>1</order>
+        <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="kb_knowledge">kb_knowledge</reference>
+        <reference/>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -627,8 +649,8 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 09:55:45</sys_created_on>
-        <sys_id>0738f7631bb8ad105b76777d8b4bcbf6</sys_id>
+        <sys_created_on>2023-02-14 14:47:09</sys_created_on>
+        <sys_id>5241a1811b8525505b76777d8b4bcba7</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -636,7 +658,7 @@
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+        <sys_updated_on>2023-02-14 14:47:09</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -648,7 +670,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0738f7631bb8ad105b76777d8b4bcbf6"/>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5241a1811b8525505b76777d8b4bcba7"/>
     <sys_hub_action_output action="delete_multiple" query="model=a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN0159fba31bb8ad105b76777d8b4bcbca,8559fba31bb8ad105b76777d8b4bcb93,97383b631bb8ad105b76777d8b4bcb46"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -691,7 +713,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <model display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f</name>
@@ -776,7 +798,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <model display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f</name>
@@ -861,7 +883,7 @@
         <label>Answer</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</model>
+        <model display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</model>
         <model_id>a037f7231bb8ad105b76777d8b4bcb7f</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f</name>
@@ -908,7 +930,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=a037f7231bb8ad105b76777d8b4bcb7f"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN9f383b631bb8ad105b76777d8b4bcb4d"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</action_type_id>
+        <action_type_id display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</action_type_id>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:47</sys_created_on>
         <sys_id>9f383b631bb8ad105b76777d8b4bcb4d</sys_id>
@@ -917,7 +939,7 @@
         <sys_updated_on>2023-02-10 09:55:47</sys_updated_on>
     </sys_hub_action_status_metadata>
     <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=9f383b631bb8ad105b76777d8b4bcb4d"/>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN0b383b631bb8ad105b76777d8b4bcb1b,4338f7631bb8ad105b76777d8b4bcbfe"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN0b383b631bb8ad105b76777d8b4bcb1b,5e41a1811b8525505b76777d8b4bcbac"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>question</element>
         <help/>
@@ -945,14 +967,14 @@
         <element>records</element>
         <help/>
         <hint/>
-        <label>Records</label>
+        <label>Records (Comma separated Sys Ids)</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f</name>
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 09:55:46</sys_created_on>
-        <sys_id>4338f7631bb8ad105b76777d8b4bcbfe</sys_id>
+        <sys_created_on>2023-02-14 14:47:09</sys_created_on>
+        <sys_id>5e41a1811b8525505b76777d8b4bcbac</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
@@ -960,7 +982,7 @@
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+        <sys_updated_on>2023-02-14 14:47:09</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -1038,19 +1060,19 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f"/>
     <sys_hub_action_plan action="delete_multiple" query="action_id=a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN3e597fa31bb8ad105b76777d8b4bcbf6"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</action_id>
+        <action_id display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"3e597fa31bb8ad105b76777d8b4bcbf6","name":"plan","plan_signature":null}}</plan>
-        <snapshot>6a597fa31bb8ad105b76777d8b4bcb82</snapshot>
+        <snapshot>8910ad011b8525505b76777d8b4bcb90</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:40</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3e597fa31bb8ad105b76777d8b4bcbf6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:40</sys_updated_on>
+        <sys_updated_on>2023-02-14 14:41:53</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1064,20 +1086,20 @@
         <copied_from_name/>
         <description>Extracts relevant information from records and asks ChatGPT a question about that information.</description>
         <internal_name>ask_question_about_knowledge_base_article</internal_name>
-        <label_cache>[{"name":"{{action.records}}","label":"action➛Records","type":"action","ref":"","reference_display":"Knowledge","base_type":"records","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.question}}","label":"action➛Question","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].answer}}","label":"step➛Script step➛answer","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"7f452837-4722-495f-aafa-a72171733eb5"}}]</label_cache>
+        <label_cache>[{"name":"{{action.record}}","label":"action➛Records","type":"action","ref":"","reference_display":"Knowledge","base_type":"glide_list","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.question}}","label":"action➛Question","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.record.Records_0}}","label":"action➛Records➛Records_0","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.records}}","label":"action➛Records","type":"action","ref":"kb_knowledge","reference_display":"Knowledge","base_type":"glide_list","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].answer}}","label":"step➛Script step➛answer","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"7f452837-4722-495f-aafa-a72171733eb5"}}]</label_cache>
         <master>true</master>
-        <name>Ask question about knowledge base article</name>
+        <name>Ask a question about a set of knowledge base articles</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="Ask a question about a knowledge base article">a037f7231bb8ad105b76777d8b4bcb7f</parent_action>
+        <parent_action display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:37</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>12593fa31bb8ad105b76777d8b4bcbe2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1085,7 +1107,7 @@
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:37</sys_updated_on>
+        <sys_updated_on>2023-02-14 14:35:33</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1156,9 +1178,9 @@
         <table>var__m_sys_hub_action_output_12593fa31bb8ad105b76777d8b4bcbe2</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_instance action="delete_multiple" query="action=12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT IN1a597fa31bb8ad105b76777d8b4bcb17"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT IN1a597fa31bb8ad105b76777d8b4bcb17,20ae1d8d1b4525505b76777d8b4bcbf0"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Ask question about knowledge base article">12593fa31bb8ad105b76777d8b4bcbe2</action>
+        <action display_value="Ask a question about a set of knowledge base articles">12593fa31bb8ad105b76777d8b4bcbe2</action>
         <cid>954a84ae-9b66-4c3e-bb2b-48383e9f963c</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -1167,17 +1189,17 @@
         <icon/>
         <inputs/>
         <label>Script step</label>
-        <order>1</order>
+        <order>2</order>
         <outputs/>
         <section/>
         <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:37</sys_created_on>
         <sys_id>1a597fa31bb8ad105b76777d8b4bcb17</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
+        <sys_updated_on>2023-02-14 14:41:52</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1a597fa31bb8ad105b76777d8b4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1188,12 +1210,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:38</sys_created_on>
         <sys_id>16597fa31bb8ad105b76777d8b4bcb38</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
+        <sys_updated_on>2023-02-14 14:41:52</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
-  gs.info(x_snc_devtools.RenderValue(inputs.records));
   outputs.answer = PromptQuestionAboutRecords(inputs.records,inputs.question);
   
 })(inputs, outputs);
@@ -1240,6 +1261,18 @@
         <value>{{action.question}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>1a597fa31bb8ad105b76777d8b4bcb17</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-10 17:01:22</sys_created_on>
+        <sys_id>69a959771b30ed105b76777d8b4bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-10 17:01:22</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_1a597fa31bb8ad105b76777d8b4bcb17</table>
+        <value>{{action.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>records</field>
         <id>1a597fa31bb8ad105b76777d8b4bcb17</id>
         <sys_created_by>admin</sys_created_by>
@@ -1265,88 +1298,7 @@
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_1a597fa31bb8ad105b76777d8b4bcb17^id=1a597fa31bb8ad105b76777d8b4bcb17"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=1a597fa31bb8ad105b76777d8b4bcb17"/>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=1a597fa31bb8ad105b76777d8b4bcb17^sys_idNOT IN9e597fa31bb8ad105b76777d8b4bcb1a,d6597fa31bb8ad105b76777d8b4bcb1f"/>
-    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>records</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="Records">records</internal_type>
-        <label>records</label>
-        <mandatory>true</mandatory>
-        <max_length>1024</max_length>
-        <model display_value="Script step">1a597fa31bb8ad105b76777d8b4bcb17</model>
-        <model_id>1a597fa31bb8ad105b76777d8b4bcb17</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_input_1a597fa31bb8ad105b76777d8b4bcb17</name>
-        <next_element/>
-        <order>0</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference display_value="" name="kb_knowledge">kb_knowledge</reference>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 10:00:38</sys_created_on>
-        <sys_id>9e597fa31bb8ad105b76777d8b4bcb1a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=1a597fa31bb8ad105b76777d8b4bcb17^sys_idNOT INd6597fa31bb8ad105b76777d8b4bcb1f,e0ae5d8d1b4525505b76777d8b4bcb11"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1417,6 +1369,87 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_list,uiTypeLabel=List</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>records</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_list</internal_type>
+        <label>records</label>
+        <mandatory>true</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Script step">1a597fa31bb8ad105b76777d8b4bcb17</model>
+        <model_id>1a597fa31bb8ad105b76777d8b4bcb17</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_1a597fa31bb8ad105b76777d8b4bcb17</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="kb_knowledge">kb_knowledge</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-14 14:35:33</sys_created_on>
+        <sys_id>e0ae5d8d1b4525505b76777d8b4bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-14 14:35:33</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1535,89 +1568,47 @@
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_hub_action_input action="delete_multiple" query="model=12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT IN16593fa31bb8ad105b76777d8b4bcbe5,1e593fa31bb8ad105b76777d8b4bcbec"/>
-    <sys_hub_action_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=627b3b6a-3ae1-4461-8607-55e423a46770</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table>kb_knowledge</choice_table>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>records</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="Records">records</internal_type>
-        <label>Records</label>
-        <mandatory>true</mandatory>
-        <max_length>1024</max_length>
-        <model display_value="Ask question about knowledge base article">12593fa31bb8ad105b76777d8b4bcbe2</model>
-        <model_id>12593fa31bb8ad105b76777d8b4bcbe2</model_id>
-        <model_table>sys_hub_action_type_snapshot</model_table>
-        <name>var__m_sys_hub_action_input_12593fa31bb8ad105b76777d8b4bcbe2</name>
-        <next_element/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Ask a question about a set of knowledge base articles">12593fa31bb8ad105b76777d8b4bcbe2</action>
+        <cid>ba337683-b095-49e0-9af9-d5b8b78176d7</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Log step</label>
         <order>1</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference display_value="" name="kb_knowledge">kb_knowledge</reference>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <outputs/>
+        <section/>
+        <step_type display_value="Log">a03fea9bc712220061f553c6f09763b1</step_type>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 10:00:37</sys_created_on>
-        <sys_id>16593fa31bb8ad105b76777d8b4bcbe5</sys_id>
+        <sys_created_on>2023-02-14 14:35:33</sys_created_on>
+        <sys_id>20ae1d8d1b4525505b76777d8b4bcbf0</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:37</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_action_input>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=16593fa31bb8ad105b76777d8b4bcbe5"/>
+        <sys_updated_on>2023-02-14 14:35:33</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=20ae1d8d1b4525505b76777d8b4bcbf0"/>
+    <sys_element_mapping action="delete_multiple" query="id=20ae1d8d1b4525505b76777d8b4bcbf0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>20ae1d8d1b4525505b76777d8b4bcbf0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-14 14:35:33</sys_created_on>
+        <sys_id>acae1d8d1b4525505b76777d8b4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-14 14:35:33</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_a03fea9bc712220061f553c6f09763b1</table>
+        <value>{{action.records}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=20ae1d8d1b4525505b76777d8b4bcbf0"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=20ae1d8d1b4525505b76777d8b4bcbf0"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=20ae1d8d1b4525505b76777d8b4bcbf0"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_20ae1d8d1b4525505b76777d8b4bcbf0"/>
+    <sys_hub_action_input action="delete_multiple" query="model=12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT IN1e593fa31bb8ad105b76777d8b4bcbec,acae1d8d1b4525505b76777d8b4bcbe0"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1657,12 +1648,12 @@
         <label>Question</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Ask question about knowledge base article">12593fa31bb8ad105b76777d8b4bcbe2</model>
+        <model display_value="Ask a question about a set of knowledge base articles">12593fa31bb8ad105b76777d8b4bcbe2</model>
         <model_id>12593fa31bb8ad105b76777d8b4bcbe2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_12593fa31bb8ad105b76777d8b4bcbe2</name>
         <next_element/>
-        <order>2</order>
+        <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -1680,14 +1671,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:37</sys_created_on>
         <sys_id>1e593fa31bb8ad105b76777d8b4bcbec</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:37</sys_updated_on>
+        <sys_updated_on>2023-02-10 17:01:21</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1700,6 +1691,88 @@
         <xml_view>false</xml_view>
     </sys_hub_action_input>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1e593fa31bb8ad105b76777d8b4bcbec"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_list,uiTypeLabel=List,uiUniqueId=c80f77d5-d4a8-41e1-9f8d-588805e7cdce</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>kb_knowledge</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>records</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_list</internal_type>
+        <label>Records</label>
+        <mandatory>true</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Ask a question about a set of knowledge base articles">12593fa31bb8ad105b76777d8b4bcbe2</model>
+        <model_id>12593fa31bb8ad105b76777d8b4bcbe2</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_12593fa31bb8ad105b76777d8b4bcbe2</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="kb_knowledge">kb_knowledge</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-14 14:35:33</sys_created_on>
+        <sys_id>acae1d8d1b4525505b76777d8b4bcbe0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-14 14:35:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=acae1d8d1b4525505b76777d8b4bcbe0"/>
     <sys_hub_action_output action="delete_multiple" query="model=12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT IN22597fa31bb8ad105b76777d8b4bcb3c,26597fa31bb8ad105b76777d8b4bcb5e,2e597fa31bb8ad105b76777d8b4bcb59"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -1742,7 +1815,7 @@
         <label>Answer</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Ask question about knowledge base article">12593fa31bb8ad105b76777d8b4bcbe2</model>
+        <model display_value="Ask a question about a set of knowledge base articles">12593fa31bb8ad105b76777d8b4bcbe2</model>
         <model_id>12593fa31bb8ad105b76777d8b4bcbe2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_12593fa31bb8ad105b76777d8b4bcbe2</name>
@@ -1827,7 +1900,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Ask question about knowledge base article">12593fa31bb8ad105b76777d8b4bcbe2</model>
+        <model display_value="Ask a question about a set of knowledge base articles">12593fa31bb8ad105b76777d8b4bcbe2</model>
         <model_id>12593fa31bb8ad105b76777d8b4bcbe2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_12593fa31bb8ad105b76777d8b4bcbe2</name>
@@ -1912,7 +1985,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Ask question about knowledge base article">12593fa31bb8ad105b76777d8b4bcbe2</model>
+        <model display_value="Ask a question about a set of knowledge base articles">12593fa31bb8ad105b76777d8b4bcbe2</model>
         <model_id>12593fa31bb8ad105b76777d8b4bcbe2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_12593fa31bb8ad105b76777d8b4bcbe2</name>
@@ -1959,7 +2032,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=12593fa31bb8ad105b76777d8b4bcbe2"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT INa2597fa31bb8ad105b76777d8b4bcb82"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Ask question about knowledge base article">12593fa31bb8ad105b76777d8b4bcbe2</action_type_id>
+        <action_type_id display_value="Ask a question about a set of knowledge base articles">12593fa31bb8ad105b76777d8b4bcbe2</action_type_id>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:38</sys_created_on>
         <sys_id>a2597fa31bb8ad105b76777d8b4bcb82</sys_id>
@@ -1968,7 +2041,7 @@
         <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
     </sys_hub_action_status_metadata>
     <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=a2597fa31bb8ad105b76777d8b4bcb82"/>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT IN16593fa31bb8ad105b76777d8b4bcbf0,9e593fa31bb8ad105b76777d8b4bcbeb"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT IN16593fa31bb8ad105b76777d8b4bcbf0,28ae1d8d1b4525505b76777d8b4bcbe6"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>question</element>
         <help/>
@@ -2002,8 +2075,8 @@
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 10:00:37</sys_created_on>
-        <sys_id>9e593fa31bb8ad105b76777d8b4bcbeb</sys_id>
+        <sys_created_on>2023-02-14 14:35:33</sys_created_on>
+        <sys_id>28ae1d8d1b4525505b76777d8b4bcbe6</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
@@ -2011,7 +2084,7 @@
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:37</sys_updated_on>
+        <sys_updated_on>2023-02-14 14:35:33</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
