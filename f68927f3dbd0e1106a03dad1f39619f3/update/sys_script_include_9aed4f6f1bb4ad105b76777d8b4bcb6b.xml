@@ -10,8 +10,6 @@
         <script><![CDATA[function PromptQuestionAboutRecords(vRecords, strQuestion)
 {
 	
-	//Log(x_snc_devtools.RenderValue(vRecords));
-	
 	if (IsActive() == false)
 	{
 		return false;
@@ -28,7 +26,7 @@
 	var aRecords = GetArrayValue(vRecords);
 	strQuestion = GetStringValue(strQuestion);
 
-	var strText = '';
+	var strAnswers = '';
 	
 	for (var nRecord = 0; nRecord < aRecords.length; nRecord++)
 	{
@@ -42,35 +40,41 @@
 
 		if (IsValidRecord(vRecord) == true)
 		{
-			strText += ExtractTextFromRecord(vRecord);
+			var strText = ExtractTextFromRecord(vRecord);
+			
+			var strAnswer = PromptQuestionAboutText(strText,strQuestion,'NOANSWER','INVALIDQUESTION');
+			
+			if (strAnswer == 'INVALIDQUESTION')
+			{
+				return false;
+			}
+			
+			if (strAnswer != false && (strAnswer != 'NOANSWER'))
+			{
+				strAnswers += strAnswer +'\n';
+			}
+				
 		}
 		
 	}
-	
-	if (strText == '')
-	{
-		return false;
-	}
 		
-	var strAnswer = PromptQuestionAboutText(strText,strQuestion);
-	
-	if (strAnswer == '')
+	if (strAnswers == '')
 	{
-		return false;
+		return 'Sorry, I could not find any answers.';
 	}
-	return strAnswer;
+	return strAnswers;
 }]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 06:50:51</sys_created_on>
         <sys_id>9aed4f6f1bb4ad105b76777d8b4bcb6b</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>PromptQuestionAboutRecords</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_script_include_9aed4f6f1bb4ad105b76777d8b4bcb6b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-14 15:26:24</sys_updated_on>
+        <sys_updated_on>2023-02-16 16:55:04</sys_updated_on>
     </sys_script_include>
 </record_update>
