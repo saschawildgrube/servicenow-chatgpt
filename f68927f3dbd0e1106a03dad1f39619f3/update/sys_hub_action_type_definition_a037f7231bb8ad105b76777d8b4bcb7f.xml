@@ -26,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a037f7231bb8ad105b76777d8b4bcb7f</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>86</sys_mod_count>
         <sys_name>Ask a question about a set of knowledge base articles</sys_name>
         <sys_overrides/>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a037f7231bb8ad105b76777d8b4bcb7f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-16 17:21:10</sys_updated_on>
+        <sys_updated_on>2023-02-17 15:38:02</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -123,10 +123,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>cb383b631bb8ad105b76777d8b4bcb1d</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-14 15:25:21</sys_updated_on>
+        <sys_updated_on>2023-02-17 15:37:57</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cb383b631bb8ad105b76777d8b4bcb1d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -151,21 +151,32 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>db383b631bb8ad105b76777d8b4bcb42</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-14 15:25:21</sys_updated_on>
+        <sys_updated_on>2023-02-17 15:37:57</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
-  var aRecordSysIds = x_snc_devtools.GetArrayValue(inputs.records);
-  
+  var aInputRecords = x_snc_devtools.GetArrayValue(inputs.records);
+
+  Debug(x_snc_devtools.RenderValue(aInputRecords));
+
   var aRecords = [];
-  for (var nRecord = 0; nRecord &lt; aRecordSysIds.length; nRecord++)
+  for (var nRecord = 0; nRecord &lt; aInputRecords.length; nRecord++)
   {
-     var grRecord = x_snc_devtools.GetRecord('kb_knowledge',aRecordSysIds[nRecord]);
-     if (x_snc_devtools.IsValidRecord(grRecord) == true)
-     {
-        aRecords.push(grRecord);
-     }
+    var vRecord = aInputRecords[nRecord];
+    if (x_snc_devtools.IsValidRecord(vRecord))
+    {
+      aRecords.push(vRecord);
+
+    }
+    else if (x_snc_devtools.IsValidSysId(vRecord))
+    {
+      var grRecord = x_snc_devtools.GetRecord('kb_knowledge',vRecord);
+      if (x_snc_devtools.IsValidRecord(grRecord) == true)
+      {
+        aRecords.push(x_snc_devtools.Clone(grRecord));
+      }
+    }
   }
   outputs.answer = PromptQuestionAboutRecords(aRecords,inputs.question);
 
@@ -1062,17 +1073,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Ask a question about a set of knowledge base articles">a037f7231bb8ad105b76777d8b4bcb7f</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"3e597fa31bb8ad105b76777d8b4bcbf6","name":"plan","plan_signature":null}}</plan>
-        <snapshot>06b7d87d1b81e5505b76777d8b4bcbed</snapshot>
+        <snapshot>45b9cd421bc529505b76777d8b4bcb63</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:40</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3e597fa31bb8ad105b76777d8b4bcbf6</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-16 17:21:11</sys_updated_on>
+        <sys_updated_on>2023-02-17 15:38:03</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1196,10 +1207,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:37</sys_created_on>
         <sys_id>1a597fa31bb8ad105b76777d8b4bcb17</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-16 17:21:09</sys_updated_on>
+        <sys_updated_on>2023-02-17 15:38:02</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1a597fa31bb8ad105b76777d8b4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1210,21 +1221,32 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 10:00:38</sys_created_on>
         <sys_id>16597fa31bb8ad105b76777d8b4bcb38</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-16 17:21:09</sys_updated_on>
+        <sys_updated_on>2023-02-17 15:38:02</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
-  var aRecordSysIds = x_snc_devtools.GetArrayValue(inputs.records);
-  
+  var aInputRecords = x_snc_devtools.GetArrayValue(inputs.records);
+
+  Debug(x_snc_devtools.RenderValue(aInputRecords));
+
   var aRecords = [];
-  for (var nRecord = 0; nRecord &lt; aRecordSysIds.length; nRecord++)
+  for (var nRecord = 0; nRecord &lt; aInputRecords.length; nRecord++)
   {
-     var grRecord = x_snc_devtools.GetRecord('kb_knowledge',aRecordSysIds[nRecord]);
-     if (x_snc_devtools.IsValidRecord(grRecord) == true)
-     {
-        aRecords.push(grRecord);
-     }
+    var vRecord = aInputRecords[nRecord];
+    if (x_snc_devtools.IsValidRecord(vRecord))
+    {
+      aRecords.push(vRecord);
+
+    }
+    else if (x_snc_devtools.IsValidSysId(vRecord))
+    {
+      var grRecord = x_snc_devtools.GetRecord('kb_knowledge',vRecord);
+      if (x_snc_devtools.IsValidRecord(grRecord) == true)
+      {
+        aRecords.push(x_snc_devtools.Clone(grRecord));
+      }
+    }
   }
   outputs.answer = PromptQuestionAboutRecords(aRecords,inputs.question);
 

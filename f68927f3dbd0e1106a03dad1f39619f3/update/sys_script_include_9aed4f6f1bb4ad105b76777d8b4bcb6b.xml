@@ -24,7 +24,16 @@
 	var IsArray = x_snc_devtools.IsArray;
 	
 	var aRecords = GetArrayValue(vRecords);
+	if (aRecords.length == 0)
+	{
+		return false;
+	}
+	
 	strQuestion = GetStringValue(strQuestion);
+	if (strQuestion == '')
+	{
+		return false;
+	}
 
 	var strAnswers = '';
 	
@@ -40,8 +49,9 @@
 
 		if (IsValidRecord(vRecord) == true)
 		{
-			var strText = ExtractTextFromRecord(vRecord);
-			if (strText != false)
+			var strText = GetStringValue(ExtractTextFromRecord(vRecord));
+			Debug('Extracted text from '+x_snc_devtools.RenderRecordSummary(vRecord)+':\n'+strText);
+			if (strText != '')
 			{
 				var strAnswer = PromptQuestionAboutText(strText,strQuestion,'NOANSWER','INVALIDQUESTION');
 
@@ -52,7 +62,11 @@
 
 				if (strAnswer != false && strAnswer.indexOf('NOANSWER') == -1)
 				{
-					strAnswers += strAnswer +'\n';
+					if (strAnswers != '')
+					{
+						strAnswers += '\n';
+					}
+					strAnswers += strAnswer;
 				}
 				
 			}
@@ -72,13 +86,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-10 06:50:51</sys_created_on>
         <sys_id>9aed4f6f1bb4ad105b76777d8b4bcb6b</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>PromptQuestionAboutRecords</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_script_include_9aed4f6f1bb4ad105b76777d8b4bcb6b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-16 17:46:34</sys_updated_on>
+        <sys_updated_on>2023-02-17 15:27:41</sys_updated_on>
     </sys_script_include>
 </record_update>

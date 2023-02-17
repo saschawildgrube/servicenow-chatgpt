@@ -22,8 +22,17 @@
 	var StringCheckRegEx = x_snc_devtools.StringCheckRegEx;
 
 	var strPrompt = GetStringValue(strPrompt);
+	if (strPrompt == '')
+	{
+		return false;
+	}
 	
 	var strApiKey = GetApiKey();
+	
+	if (strApiKey == 'test')
+	{
+		return 'This is a test!';
+	}
 	
 	if (strApiKey == '')
 	{
@@ -68,13 +77,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-17 07:06:37</sys_created_on>
         <sys_id>572b2b77dbd0e1106a03dad1f39619f9</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Prompt</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_script_include_572b2b77dbd0e1106a03dad1f39619f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-09 22:34:18</sys_updated_on>
+        <sys_updated_on>2023-02-17 14:55:20</sys_updated_on>
     </sys_script_include>
 </record_update>
