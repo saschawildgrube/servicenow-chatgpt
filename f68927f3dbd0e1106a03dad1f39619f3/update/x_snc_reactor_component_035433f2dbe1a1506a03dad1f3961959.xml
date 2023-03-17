@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_reactor_component">
+    <x_snc_reactor_component action="INSERT_OR_UPDATE">
+        <content_css/>
+        <dependencies>67d4f48bdbe5a1506a03dad1f39619d5</dependencies>
+        <description>The main ChatGPT application reactor component.</description>
+        <jsx>false</jsx>
+        <name>ChatGPTApp</name>
+        <role>app</role>
+        <script><![CDATA[class ChatGPTApp extends ReactorComponent
+{
+	constructor(props)
+	{
+		super(props);
+		this.state = { clicked: false };
+		this.onClick = this.onClick.bind(this);
+	}
+
+	componentDidMount()
+	{
+	}
+
+	componentWillUnmount()
+	{
+	}
+
+	/*
+	onClick()
+	{
+		this.setState( {clicked: true} );
+		if (typeof this.props.callbackOnClick == 'function')
+		{
+			this.props.callbackOnClick();
+		}
+		DoModalMessage('Demo','I was clicked!',function(){});
+	}
+	*/
+
+	render()
+	{
+		var aComponents = [];
+		
+		aComponents.push(
+			e(ChatGPTCodeReview,
+			{
+				table: GetParam('table'),
+				id: GetParam('id')
+			},
+			null));
+		
+		return e('div',{},aComponents);	
+	}	
+}]]></script>
+        <source_type>ui_script</source_type>
+        <sys_class_name>x_snc_reactor_component</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-17 08:30:53</sys_created_on>
+        <sys_id>035433f2dbe1a1506a03dad1f3961959</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ChatGPTApp</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>x_snc_reactor_component_035433f2dbe1a1506a03dad1f3961959</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:13:08</sys_updated_on>
+        <type>script</type>
+        <ui_script display_value="x_snc_chat_gpt.ChatGPTApp">6b24fbb2dbe1a1506a03dad1f3961968</ui_script>
+        <url/>
+    </x_snc_reactor_component>
+</record_update>

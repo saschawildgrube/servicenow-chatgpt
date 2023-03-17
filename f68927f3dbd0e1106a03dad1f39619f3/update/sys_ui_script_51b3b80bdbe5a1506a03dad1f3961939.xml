@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>A react component that takes source code and asks ChatGPT to perform a code review.</description>
+        <global>false</global>
+        <ignore_in_now_experience>false</ignore_in_now_experience>
+        <name>x_snc_chat_gpt.ChatGPTCodeReview</name>
+        <script><![CDATA[class ChatGPTCodeReview extends ReactorComponent
+{
+	constructor(props)
+	{
+		super(props);
+		this.state =
+			{
+				state_code: 'start',
+				state_codereview: 'start'
+			};
+		this.onServerRequestCodeReview = this.onServerRequestCodeReview.bind(this);
+		this.onServerRequestGetCodeForCodeReview = this.onServerRequestGetCodeForCodeReview.bind(this);
+	}
+
+	componentDidMount()
+	{
+	}
+
+	componentWillUnmount()
+	{
+	}
+
+	onServerRequestGetCodeForCodeReview(response)
+	{
+		console.log('onServerRequestGetCodeForCodeReview '+this.props.table+' '+this.props.sys_id);
+		console.log('onServerRequestGetCodeForCodeReview '+response);
+		this.setState(
+			{
+				state_code: 'complete',
+				code: response
+			}
+		);
+	}
+	
+	onServerRequestCodeReview(response)
+	{
+		this.setState(
+			{
+				state_codereview: 'complete',
+				codereview: response
+			}
+		);
+	}	
+
+	render()
+	{
+		
+		var strTable = this.props.table;
+		var strSysId = this.props.sys_id;
+		
+		console.log('render: '+strTable+' '+strSysId+ ' '+this.state.state_code);
+		
+		var aComponentsChat = [];
+		var aComponentsCode = [];
+		switch (this.state.state_code)
+		{
+			case 'start':
+			default:
+				ServerRequest('x_snc_chat_gpt.ChatGPTClientAPI','GetCodeForCodeReview',
+					{
+						table: strTable,
+						sys_id: strSysId
+					},
+					this.onServerRequestGetCodeForCodeReview);
+				this.setState({ state_code: 'loading' });
+
+			case 'loading':
+				aComponentsCode.push( e(Waiting,{ text: 'Loading code...' }) );
+				break;
+			case 'complete':
+				aComponentsCode.push( e('p',{},'Code under review:') );
+				aComponentsCode.push( e('pre',{},this.state.code) );
+				break;
+		}
+		switch (this.state.state_codereview)
+		{
+			case 'start':
+				ServerRequest('x_snc_chat_gpt.ChatGPTClientAPI','CodeReview',
+					{
+						table: strTable,
+						sys_id: strSysId
+					},
+					this.onServerRequestCodeReview);
+				this.setState({ state_codereview: 'loading' });
+			case 'loading':
+				aComponentsChat.push( e(Waiting,{ text: 'ChatGPT is reviewing the source code...' }) );
+				break;
+			case 'complete':
+				aComponentsChat.push( e('p',{},'Response from ChatGPT:') );
+				aComponentsChat.push( e('pre',{},this.state.codereview) );
+				break;
+		}		
+		
+		var divChat = e('div', {
+				style:
+				{
+					float: 'left',
+					width: '48%'
+				}
+			},aComponentsChat);
+		var divCode = e('div', {
+				style:
+				{
+					float: 'right',
+					width: '48%'
+				}
+			},aComponentsCode);
+
+		
+		return e('div',{ width: '100%'},[divChat,divCode]);
+	}	
+}]]></script>
+        <script_name>ChatGPTCodeReview</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-17 13:09:46</sys_created_on>
+        <sys_id>51b3b80bdbe5a1506a03dad1f3961939</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>x_snc_chat_gpt.ChatGPTCodeReview</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_ui_script_51b3b80bdbe5a1506a03dad1f3961939</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-17 14:48:41</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

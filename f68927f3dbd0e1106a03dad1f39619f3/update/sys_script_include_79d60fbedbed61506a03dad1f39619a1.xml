@@ -17,10 +17,17 @@
 	var HtmlEncode = x_snc_devtools.HtmlEncode;
 	var StringReplace = x_snc_devtools.StringReplace;
 
+	function HtmlRenderCode(strSourceCode)
+	{
+		var strSourceCode = HtmlEncode(strSourceCode);
+		strSourceCode = StringReplace(strSourceCode,'<br/>','');
+		return '<pre>' + strSourceCode + '</pre>';
+	}
+
 	function HtmlRenderPre(strText)
 	{
 		var strText = HtmlEncode(strText);
-		strText = StringReplace(strText,'<br/>','');
+		//strText = StringReplace(strText,'<br/>','');
 		return '<pre>' + strText + '</pre>';
 	}
 	
@@ -52,9 +59,17 @@
 		return HtmlRenderError('Invalid Record.'); 
 	}
 
+	
+	
+	
 	var strHtml = '';
 	
+	
 	strHtml += '<h1>ChatGPT Code Review</h1>';
+
+	strHtml += x_snc_reactor.Render('ChatGPTApp',{ table: strTable, id: strSysId });
+	
+	return strHtml;
 	
 	strHtml += '<div style="width:100%;">';
 	
@@ -62,14 +77,13 @@
 			//strHtml += '<pre>'+HtmlEncode(grRecord.script)+'</pre>';
 			//strHtml += '<pre>'+grRecord.script+'</pre>';
 			strHtml += '<p>ChatGPT says:</p>';
-			strHtml += '<p>';
-			strHtml += HtmlEncode(PromptCodeReview(grRecord.script));
-			strHtml += '</p>';
+			strHtml += HtmlRenderPre(PromptCodeReview(grRecord.script));
 
 		strHtml += '</div>';
 
 		strHtml += '<div style="width:49%; float: right;">';
-			strHtml += HtmlRenderPre(grRecord.script);
+			strHtml += '<p>Code under review:</p>';
+			strHtml += HtmlRenderCode(grRecord.script);
 		strHtml += '</div>';
 	
 	
@@ -81,13 +95,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-03-17 05:14:25</sys_created_on>
         <sys_id>79d60fbedbed61506a03dad1f39619a1</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name>HtmlRenderPageCodeReview</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_script_include_79d60fbedbed61506a03dad1f39619a1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-17 07:17:56</sys_updated_on>
+        <sys_updated_on>2023-03-17 13:24:24</sys_updated_on>
     </sys_script_include>
 </record_update>

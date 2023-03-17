@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>The main ChatGPT application reactor component.</description>
+        <global>false</global>
+        <ignore_in_now_experience>false</ignore_in_now_experience>
+        <name>x_snc_chat_gpt.ChatGPTApp</name>
+        <script><![CDATA[class ChatGPTApp extends ReactorComponent
+{
+	constructor(props)
+	{
+		super(props);
+		//this.state = { clicked: false };
+		//this.onClick = this.onClick.bind(this);
+	}
+
+	componentDidMount()
+	{
+	}
+
+	componentWillUnmount()
+	{
+	}
+
+	/*
+	onClick()
+	{
+		this.setState( {clicked: true} );
+		if (typeof this.props.callbackOnClick == 'function')
+		{
+			this.props.callbackOnClick();
+		}
+		DoModalMessage('Demo','I was clicked!',function(){});
+	}
+	*/
+
+	render()
+	{
+		var aComponents = [];
+
+		aComponents.push(
+			e(ChatGPTCodeReview,
+			{
+				table: GetParameter('table'),
+				sys_id: GetParameter('id')
+			},
+			null));
+		
+		return e('div',{},aComponents);	
+	}	
+}]]></script>
+        <script_name>ChatGPTApp</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-17 08:30:19</sys_created_on>
+        <sys_id>6b24fbb2dbe1a1506a03dad1f3961968</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>x_snc_chat_gpt.ChatGPTApp</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_ui_script_6b24fbb2dbe1a1506a03dad1f3961968</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-17 14:19:06</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>
