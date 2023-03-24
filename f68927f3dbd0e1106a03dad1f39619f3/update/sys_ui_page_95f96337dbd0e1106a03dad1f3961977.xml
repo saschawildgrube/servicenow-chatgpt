@@ -100,11 +100,15 @@
 	
 	<h2>Release Notes</h2>
 <!--
-	<h3>2.0.0 - 2023-TODO</h3>
+	<h3>3.TODO.0 - 2023-TODO</h3>
 	<ol>
 		<li>TODO</li>
 	</ol>
 -->
+	<h3>3.1.0 - 2023-TODO</h3>
+	<ol>
+		<li>TODO</li>
+	</ol>
 	
 	<h3>3.0.0 - 2023-93-24</h3>
 	<ol>
@@ -140,13 +144,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-17 07:00:28</sys_created_on>
         <sys_id>95f96337dbd0e1106a03dad1f3961977</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>manual</sys_name>
-        <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
-        <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_ui_page_95f96337dbd0e1106a03dad1f3961977</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-24 12:34:55</sys_updated_on>
+        <sys_updated_on>2023-03-24 13:14:06</sys_updated_on>
     </sys_ui_page>
 </record_update>
