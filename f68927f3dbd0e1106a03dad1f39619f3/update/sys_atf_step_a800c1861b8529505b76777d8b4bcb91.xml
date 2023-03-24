@@ -14,14 +14,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-17 14:55:44</sys_created_on>
         <sys_id>a800c1861b8529505b76777d8b4bcb91</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
-        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
-        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_atf_step_a800c1861b8529505b76777d8b4bcb91</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-17 14:58:08</sys_updated_on>
+        <sys_updated_on>2023-03-24 08:46:03</sys_updated_on>
         <table/>
         <test display_value="ChatGPT - Prompt">dcffb0861b8529505b76777d8b4bcb15</test>
         <timeout/>
@@ -50,9 +50,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-17 14:55:44</sys_created_on>
         <sys_id>ed00c1861b8529505b76777d8b4bcb84</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-17 14:58:08</sys_updated_on>
+        <sys_updated_on>2023-03-24 08:46:03</sys_updated_on>
         <value>(function(outputs, steps, stepResult, assertEqual)&#13;
 {&#13;
 	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
@@ -71,7 +71,7 @@
 			null);&#13;
 	}&#13;
 &#13;
-	x_snc_devtools.SetProperty('openai.apikey','test');&#13;
+	x_snc_devtools.SetProperty('openai.apikey','test',true);&#13;
 	&#13;
 	TestCase_Prompt(null,false);&#13;
 	TestCase_Prompt('',false);&#13;
