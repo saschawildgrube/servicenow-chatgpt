@@ -18,6 +18,7 @@
 
 	<h2>Features</h2> 
 	<p>Users with the x_snc_chat_gpt.user role can have conversations with ChatGPT.</p>
+	<p>Ask ChatGPT to review code contained in Script Includes.</p>
 	<p>Developers can connect to the OpenAI API and send prompts to ChatGPT.</p>
 	<p>Start with the script include function x_snc_chat_gpt.Prompt().</p>
 	<p>Perform the installation instructions below!</p>
@@ -50,6 +51,13 @@
 		]</g2:no_escape>
 		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsImportFromSourceControl(
+				'Reactor',
+				'https://github.com/saschawildgrube/servicenow-reactor',
+				true,
+				'https://www.wildgrube.com/servicenow-reactor/');
+		]</g2:no_escape>		
+		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsImportFromSourceControl(
 				'ChatGPT',
 				'https://github.com/saschawildgrube/servicenow-chatgpt');
 		]</g2:no_escape>		
@@ -68,10 +76,8 @@
 	<h3>Roles</h3>
 	<g2:no_escape>$[docapi.RenderRoles()]</g2:no_escape>		
 
-<!--
 	<h3>UI Actions</h3>
 	<g2:no_escape>$[docapi.RenderUIActions()]</g2:no_escape>		
--->
 
 	<h3>Script Includes</h3>
 	<g2:no_escape>$[docapi.RenderScriptIncludes()]</g2:no_escape>
@@ -100,6 +106,19 @@
 	</ol>
 -->
 	
+	<h3>3.0.0 - 2023-93-24</h3>
+	<ol>
+		<li>Backward incompatible change: Function Prompt() no longer considers conversations - use ConversationPrompt() instead!</li>
+		<li>DevTools 1.59.0 is now required.</li>
+		<li>Reactor 1.4.0 is now required.</li>
+		<li>Added the "Code Review" UI Action for Script Includes.</li> 
+		<li>Added function PromptCodeReview().</li>
+		<li>Added function PromptQuestionAboutText().</li>
+		<li>Added function PromptQuestionAboutRecords().</li>
+		<li>Added function ExtractTextFromRecord().</li>
+		<li>Added menu item for creating a new conversation.</li>
+	</ol>	
+	
 	<h3>2.0.0 - 2023-02-05</h3>
 	<ol>
 		<li>Backward incompatible change: Renamed function ChatGPT() to Prompt().</li>
@@ -121,13 +140,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-17 07:00:28</sys_created_on>
         <sys_id>95f96337dbd0e1106a03dad1f3961977</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_ui_page_95f96337dbd0e1106a03dad1f3961977</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-05 21:58:09</sys_updated_on>
+        <sys_updated_on>2023-03-24 12:34:55</sys_updated_on>
     </sys_ui_page>
 </record_update>

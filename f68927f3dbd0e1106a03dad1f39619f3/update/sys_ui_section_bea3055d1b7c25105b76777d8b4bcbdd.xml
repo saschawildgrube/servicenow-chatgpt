@@ -4,13 +4,13 @@
             <element>title</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>18950a611bb0a5105b76777d8b4bcb90</sys_id>
+            <sys_created_on>2023-02-09 22:36:59</sys_created_on>
+            <sys_id>4cec15a31b30ad105b76777d8b4bcb87</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
+            <sys_updated_on>2023-02-09 22:36:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>.begin_split</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>9c950a611bb0a5105b76777d8b4bcb90</sys_id>
+            <sys_created_on>2023-02-09 22:36:59</sys_created_on>
+            <sys_id>ccec15a31b30ad105b76777d8b4bcb87</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
+            <sys_updated_on>2023-02-09 22:36:59</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>sys_created_by</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>10950a611bb0a5105b76777d8b4bcb91</sys_id>
+            <sys_created_on>2023-02-09 22:36:59</sys_created_on>
+            <sys_id>40ec15a31b30ad105b76777d8b4bcb88</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
+            <sys_updated_on>2023-02-09 22:36:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>90950a611bb0a5105b76777d8b4bcb91</sys_id>
+            <sys_created_on>2023-02-09 22:36:59</sys_created_on>
+            <sys_id>c0ec15a31b30ad105b76777d8b4bcb88</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
+            <sys_updated_on>2023-02-09 22:36:59</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>sys_created_on</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>14950a611bb0a5105b76777d8b4bcb91</sys_id>
+            <sys_created_on>2023-02-09 22:36:59</sys_created_on>
+            <sys_id>44ec15a31b30ad105b76777d8b4bcb88</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
+            <sys_updated_on>2023-02-09 22:36:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>.end_split</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>94950a611bb0a5105b76777d8b4bcb91</sys_id>
+            <sys_created_on>2023-02-09 22:36:59</sys_created_on>
+            <sys_id>c4ec15a31b30ad105b76777d8b4bcb88</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
+            <sys_updated_on>2023-02-09 22:36:59</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>prompt</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>18950a611bb0a5105b76777d8b4bcb91</sys_id>
+            <sys_created_on>2023-02-09 22:36:59</sys_created_on>
+            <sys_id>48ec15a31b30ad105b76777d8b4bcb88</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
+            <sys_updated_on>2023-02-09 22:36:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,43 +102,15 @@
             <element>activity.xml</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>98950a611bb0a5105b76777d8b4bcb91</sys_id>
+            <sys_created_on>2023-02-09 22:36:59</sys_created_on>
+            <sys_id>c8ec15a31b30ad105b76777d8b4bcb88</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
+            <sys_updated_on>2023-02-09 22:36:59</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>answer</element>
-            <position>8</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>dc950a611bb0a5105b76777d8b4bcb91</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>context</element>
-            <position>9</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-02-03 20:26:55</sys_created_on>
-            <sys_id>50950a611bb0a5105b76777d8b4bcb92</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_chat_gpt_conversation" sys_domain="global" view="Default view">bea3055d1b7c25105b76777d8b4bcbdd</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-02-03 20:26:55</sys_updated_on>
-            <sys_user/>
-            <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>

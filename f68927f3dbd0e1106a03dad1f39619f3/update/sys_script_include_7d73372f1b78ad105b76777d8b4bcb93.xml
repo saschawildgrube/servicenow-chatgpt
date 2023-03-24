@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_chat_gpt.ExtractTextFromRecord</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Extracts all text from a record that may contain relevant information.</description>
+        <name>ExtractTextFromRecord</name>
+        <script><![CDATA[function ExtractTextFromRecord(grRecord)
+{
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetValue = x_snc_devtools.GetValue;
+	var IsDerivedFromTable = x_snc_devtools.IsDerivedFromTable;
+
+
+	if (IsValidRecord(grRecord) == false)
+	{
+		return false;
+	}
+	var strText = '';
+	
+	var strClassName = grRecord.getRecordClassName();
+	if (strClassName == 'kb_knowledge' || IsDerivedFromTable(strClassName,'kb_knowledge'))
+	{
+		strText += grRecord.getDisplayValue('text') + '\n';
+	}
+	else
+	{
+		strText += GetValue(grRecord,'short_description') + '\n';
+		strText += GetValue(grRecord,'description') + '\n';
+	}
+	
+	strText = strText.trim();
+	
+	return strText;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-10 09:36:32</sys_created_on>
+        <sys_id>7d73372f1b78ad105b76777d8b4bcb93</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ExtractTextFromRecord</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_script_include_7d73372f1b78ad105b76777d8b4bcb93</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-16 17:50:31</sys_updated_on>
+    </sys_script_include>
+</record_update>

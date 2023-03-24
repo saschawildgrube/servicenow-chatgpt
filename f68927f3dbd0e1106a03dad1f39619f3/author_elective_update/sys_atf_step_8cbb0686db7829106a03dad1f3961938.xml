@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Checks if all documented dependencies of the application are installed in a compatible version
+</description>
+        <display_name>DevTools - Check app dependencies</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <snapshot/>
+        <step_config display_value="DevTools - Check app dependencies">e4b8e71e1bbb5d105b76777d8b4bcb35</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-05 10:10:46</sys_created_on>
+        <sys_id>8cbb0686db7829106a03dad1f3961938</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>DevTools - Check app dependencies</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_atf_step_8cbb0686db7829106a03dad1f3961938</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-17 15:30:48</sys_updated_on>
+        <table/>
+        <test display_value="ChatGPT - Installation">6df96337dbd0e1106a03dad1f396197f</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=8cbb0686db7829106a03dad1f3961938"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</application>
+        <file_path/>
+        <instance_id>01bfa2ffdb5ecd104d2bac44d496195a</instance_id>
+        <instance_name>wildgrubetestsandiego</instance_name>
+        <name>sys_atf_step_8cbb0686db7829106a03dad1f3961938</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Checks if all documented dependencies of the application are installed in a compatible version
+</description><display_name>DevTools - Check app dependencies</display_name><inputs/><mugshots_cache_json/><notes/><order>1</order><snapshot/><step_config display_value="DevTools - Check app dependencies">e4b8e71e1bbb5d105b76777d8b4bcb35</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-05 10:10:46</sys_created_on><sys_id>8cbb0686db7829106a03dad1f3961938</sys_id><sys_mod_count>2</sys_mod_count><sys_name>DevTools - Check app dependencies</sys_name><sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package><sys_policy/><sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope><sys_update_name>sys_atf_step_8cbb0686db7829106a03dad1f3961938</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-03-17 15:30:48</sys_updated_on><table/><test display_value="ChatGPT - Installation">6df96337dbd0e1106a03dad1f396197f</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=8cbb0686db7829106a03dad1f3961938"/></record_update>]]></payload>
+        <payload_hash>1376648924</payload_hash>
+        <record_name>DevTools - Check app dependencies</record_name>
+        <reverted_from/>
+        <source>b8c6a1421b4929505b76777d8b4bcbcc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-17 15:30:48</sys_created_on>
+        <sys_id>949415cfdb69a1506a03dad1f3961938</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186f031ea490000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-17 15:30:48</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>dc9415cf8269a15037d38f58f8f57937</update_guid>
+        <update_guid_history>dc9415cf8269a15037d38f58f8f57937:1376648924,d6bb82861c7829109d07eacd257c4455:-131461106</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-17 15:30:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>04bd3bc2b89446908a70bab81bd94f10</sys_id>
+        <sys_metadata>8cbb0686db7829106a03dad1f3961938</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevTools - Check app dependencies</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_scope_delete display_value="">4a5158d7872e472a971abc65c818cda4</sys_scope_delete>
+        <sys_update_name>sys_atf_step_8cbb0686db7829106a03dad1f3961938</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_8cbb0686db7829106a03dad1f3961938">949415cfdb69a1506a03dad1f3961938</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-17 15:30:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

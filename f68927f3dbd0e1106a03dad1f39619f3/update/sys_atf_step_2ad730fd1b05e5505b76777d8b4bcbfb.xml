@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <snapshot/>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-16 19:43:26</sys_created_on>
+        <sys_id>2ad730fd1b05e5505b76777d8b4bcbfb</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_atf_step_2ad730fd1b05e5505b76777d8b4bcbfb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-17 14:52:51</sys_updated_on>
+        <table/>
+        <test display_value="ChatGPT - ExtractTextFromRecord">ddc77cbd1b05e5505b76777d8b4bcb8d</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=2ad730fd1b05e5505b76777d8b4bcbfb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>2ad730fd1b05e5505b76777d8b4bcbfb</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-16 19:43:26</sys_created_on>
+        <sys_id>0a4874fd1b05e5505b76777d8b4bcb68</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-17 14:52:51</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual)&#13;
+{&#13;
+	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
+	&#13;
+	test.SetResult(true);&#13;
+&#13;
+	function TestCase_ExtractTextFromRecord(grRecord, vExpected)&#13;
+	{&#13;
+		test.TestCase(&#13;
+			'Function ExtractTextFromRecord()',&#13;
+			ExtractTextFromRecord,&#13;
+			{&#13;
+				'Record': grRecord &#13;
+			},&#13;
+			vExpected,&#13;
+			null);&#13;
+	}&#13;
+&#13;
+&#13;
+&#13;
+	TestCase_ExtractTextFromRecord(null,false);&#13;
+	TestCase_ExtractTextFromRecord('',false);&#13;
+	&#13;
+	var grIncident = new GlideRecord('incident');&#13;
+	grIncident.initialize();&#13;
+	grIncident.short_description = 'Test1';&#13;
+	grIncident.description = 'More Details';&#13;
+	grIncident.insert();&#13;
+	TestCase_ExtractTextFromRecord(grIncident,'Test1\nMore Details');&#13;
+	&#13;
+	&#13;
+	var grKB = new GlideRecord('kb_knowledge');&#13;
+	grKB.initialize();&#13;
+	grKB.short_description = 'Test1';&#13;
+	grKB.text = '&lt;h1&gt;Hello World!&lt;/h1&gt;';&#13;
+	grKB.insert();&#13;
+	TestCase_ExtractTextFromRecord(grKB,'&lt;h1&gt;Hello World!&lt;/h1&gt;');&#13;
+&#13;
+	&#13;
+	return test.GetResult();&#13;
+	&#13;
+})(outputs, steps, stepResult, assertEqual);</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>2ad730fd1b05e5505b76777d8b4bcbfb</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-16 19:43:26</sys_created_on>
+        <sys_id>424874fd1b05e5505b76777d8b4bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-16 19:43:26</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+</record_update>

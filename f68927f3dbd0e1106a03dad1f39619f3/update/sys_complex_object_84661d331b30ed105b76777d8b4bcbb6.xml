@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDc0661d331f30ed10b06fefb7a6074eb6</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>f68927f3dbd0e1106a03dad1f39619f3</scope_name>
+        <serialized_content>{"FlowDesigner:FDc0661d331f30ed10b06fefb7a6074eb6":{"$COCollectionField":[{"Object":{}}],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDc0661d331f30ed10b06fefb7a6074eb6.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Records\",\"mandatory\":\"true\",\"child_name\":\"Records_0\",\"uiUniqueId\":\"627b3b6a-3ae1-4461-8607-55e423a46770\",\"uiTypeLabel\":\"Records\",\"co_type_name\":\"FDc0661d331f30ed10b06fefb7a6074eb6\",\"child_label\":\"Records_0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"records\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"0\",\"child_uiUniqueId\":\"0403bd55-7938-4f4a-8b17-14fe06ce8a84\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-10 16:47:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>84661d331b30ed105b76777d8b4bcbb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDc0661d331f30ed10b06fefb7a6074eb6</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_complex_object_84661d331b30ed105b76777d8b4bcbb6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-10 16:47:04</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

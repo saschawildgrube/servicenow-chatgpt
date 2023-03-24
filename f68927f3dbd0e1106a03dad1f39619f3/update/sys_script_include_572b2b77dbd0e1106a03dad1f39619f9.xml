@@ -7,7 +7,7 @@
         <client_callable>false</client_callable>
         <description>Sends a prompt to the ChatGPT engine and returns the answer string.</description>
         <name>Prompt</name>
-        <script><![CDATA[function Prompt(strPrompt, vConversation)
+        <script><![CDATA[function Prompt(strPrompt)
 {
 	if (IsActive() == false)
 	{
@@ -19,25 +19,24 @@
 	var GetValue = x_snc_devtools.GetValue;
 	var GetStringValue = x_snc_devtools.GetStringValue;
 	var RenderValue = x_snc_devtools.RenderValue;
-	var IsValidRecord = x_snc_devtools.IsValidRecord;
-	
+	var StringCheckRegEx = x_snc_devtools.StringCheckRegEx;
+
 	var strPrompt = GetStringValue(strPrompt);
-	
-	var strApiKey = GetApiKey();
-	
-	if (strApiKey == '')
+	if (strPrompt == '')
 	{
 		return false;
 	}
 	
-	var grConversation = GetConversationRecord(vConversation);
-	if (IsValidRecord(grConversation) == true)
+	var strApiKey = GetApiKey();
+	
+	if (strApiKey == 'test')
 	{
-		var strContext = GetStringValue(grConversation.context);
-		if (strContext != '')
-		{
-			strPrompt = strContext + '\n' + strPrompt;
-		}
+		return 'This is a test!';
+	}
+	
+	if (strApiKey == '')
+	{
+		return false;
 	}
 	
 	var request = {};
@@ -57,36 +56,34 @@
 	var strResponseBody = HttpRequest(request);
 	
 	var response = ParseJson(strResponseBody)
-	
-	Log('Prompt:\n'+strPrompt+'\nResponse:\n'+RenderValue(response));
-	
 	var strAnswer = GetStringValue(GetValue(response,'choices',0,'text'));
+	strAnswer = strAnswer.trim();
+	if (StringCheckRegEx(strAnswer,'^[A-Z]:') == true)
+	{
+		strAnswer = strAnswer.substring(2);
+	}
+	strAnswer = strAnswer.trim();
 
+	Log('Prompt:\n'+strPrompt+'\nResponse:\n'+RenderValue(response)+'\nAnswer:\n'+strAnswer);
+	
 	if (strAnswer == '')
 	{
 		return false;
 	}
 
-	if (IsValidRecord(grConversation) == true)
-	{
-		grConversation.context = strPrompt;
-		grConversation.answer = strAnswer;
-		grConversation.update();
-	}
-	
 	return strAnswer;
 }]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-17 07:06:37</sys_created_on>
         <sys_id>572b2b77dbd0e1106a03dad1f39619f9</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Prompt</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_script_include_572b2b77dbd0e1106a03dad1f39619f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-02 22:28:58</sys_updated_on>
+        <sys_updated_on>2023-02-17 14:55:20</sys_updated_on>
     </sys_script_include>
 </record_update>
