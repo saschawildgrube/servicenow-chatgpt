@@ -13,7 +13,7 @@
         <client_callable>false</client_callable>
         <collection>x_snc_chat_gpt_conversation</collection>
         <condition/>
-        <description/>
+        <description>If the title is not yet set for a new conversation the title is set.</description>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
@@ -53,15 +53,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ca7d4d591bbc25105b76777d8b4bcb92</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Conversation Set Title</sys_name>
         <sys_overrides/>
-        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
-        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_script_ca7d4d591bbc25105b76777d8b4bcb92</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-09 19:03:00</sys_updated_on>
+        <sys_updated_on>2023-03-17 16:22:54</sys_updated_on>
         <template/>
         <when>before</when>
         <x_snc_datasilos_created>false</x_snc_datasilos_created>

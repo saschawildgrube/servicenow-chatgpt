@@ -24,21 +24,9 @@
 		return false;
 	}
 	
-	/*
-	if (strFallback == '')
-	{
-		strFallback = 'I don\'t know';
-	}
-	*/
-
 	var strPrompt = '';
-	
-
-	strPrompt += 'Find defects, optimize or complete the provided source code.\n';
+	strPrompt += 'Find defects, optimize, document and complete the provided source code.\n';
 	strPrompt += 'Undefined functions are NO defects. Please ignore them!\n';
-	//strPrompt += 'If the answer is not contained within the text below, say "'+strFallback+'"!\n';
-	//strPrompt += 'If you do not understand the question, say "'+strInvalidQuestion+'"!\n';
-	//strPrompt += 'Answer the question in the language of the question!\n';
 	strPrompt += 'Source Code:\n';
 	strPrompt += strSourceCode+'\n';
 	
@@ -54,13 +42,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-03-17 07:15:02</sys_created_on>
         <sys_id>8a136bbedb61a1506a03dad1f396191c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>PromptCodeReview</sys_name>
-        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_package display_value="ChatGPT" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_scope display_value="ChatGPT">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_script_include_8a136bbedb61a1506a03dad1f396191c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-17 14:52:57</sys_updated_on>
+        <sys_updated_on>2023-03-18 20:51:56</sys_updated_on>
     </sys_script_include>
 </record_update>
