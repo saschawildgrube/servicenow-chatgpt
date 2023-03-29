@@ -13,10 +13,12 @@
 		this.state =
 			{
 				state_code: 'start',
-				state_codereview: 'start'
+				state_codereview: 'start',
+				state_codeexplain: 'start'
 			};
 		this.onServerRequestCodeReview = this.onServerRequestCodeReview.bind(this);
 		this.onServerRequestGetCodeForCodeReview = this.onServerRequestGetCodeForCodeReview.bind(this);
+		this.onServerRequestCodeExplain = this.onServerRequestCodeExplain.bind(this);
 	}
 
 	componentDidMount()
@@ -48,6 +50,16 @@
 			}
 		);
 	}	
+	
+	onServerRequestCodeExplain(response)
+	{
+		this.setState(
+			{
+				state_codeexplain: 'complete',
+				codeexplain: response
+			}
+		);
+	}		
 
 	render()
 	{
@@ -56,8 +68,9 @@
 		var strSysId = this.props.sys_id;
 		
 		console.log('render: '+strTable+' '+strSysId+ ' '+this.state.state_code);
-		
-		var aComponentsChat = [];
+
+		var aComponentsCodeExplain = [];
+		var aComponentsCodeReview = [];
 		var aComponentsCode = [];
 		switch (this.state.state_code)
 		{
@@ -90,22 +103,41 @@
 					this.onServerRequestCodeReview);
 				this.setState({ state_codereview: 'loading' });
 			case 'loading':
-				aComponentsChat.push( e(Waiting,{ text: 'ChatGPT is reviewing the source code...' }) );
+				aComponentsCodeReview.push( e(Waiting,{ text: 'ChatGPT is reviewing the source code...' }) );
 				break;
 			case 'complete':
-				aComponentsChat.push( e('p',{},'Response from ChatGPT:') );
-				aComponentsChat.push( e('pre',{},this.state.codereview) );
+				aComponentsCodeReview.push( e('p',{ },'Review by ChatGPT:') );
+				aComponentsCodeReview.push( e('pre',{},this.state.codereview) );
 				break;
 		}		
+		switch (this.state.state_codeexplain)
+		{
+			case 'start':
+				ServerRequest('x_snc_chat_gpt.ChatGPTClientAPI','CodeExplain',
+					{
+						table: strTable,
+						sys_id: strSysId
+					},
+					this.onServerRequestCodeExplain);
+				this.setState({ state_codeexplain: 'loading' });
+			case 'loading':
+				aComponentsCodeExplain.push( e(Waiting,{ text: 'ChatGPT is explaining the source code...' }) );
+				break;
+			case 'complete':
+				aComponentsCodeExplain.push( e('p',{},'Explanation from ChatGPT:') );
+				aComponentsCodeExplain.push( e('p',{},this.state.codeexplain) );
+				break;
+		}				
 		
-		var divChat = e('div', {
+		var divLeft = e('div', {
 				style:
 				{
 					float: 'left',
 					width: '48%'
 				}
-			},aComponentsChat);
-		var divCode = e('div', {
+			},[aComponentsCodeExplain,aComponentsCodeReview]);		
+		
+		var divRight = e('div', {
 				style:
 				{
 					float: 'right',
@@ -114,7 +146,14 @@
 			},aComponentsCode);
 
 		
-		return e('div',{ width: '100%'},[divChat,divCode]);
+		return e('div',
+			{
+				width: '100%'
+			},
+			[
+				divLeft,
+				divRight
+			]);
 	}	
 }]]></script>
         <script_name>ChatGPTCodeReview</script_name>
@@ -122,14 +161,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-03-17 13:09:46</sys_created_on>
         <sys_id>51b3b80bdbe5a1506a03dad1f3961939</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>x_snc_chat_gpt.ChatGPTCodeReview</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_ui_script_51b3b80bdbe5a1506a03dad1f3961939</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-17 14:48:41</sys_updated_on>
+        <sys_updated_on>2023-03-29 13:31:19</sys_updated_on>
         <ui_type>0</ui_type>
         <use_scoped_format>false</use_scoped_format>
     </sys_ui_script>

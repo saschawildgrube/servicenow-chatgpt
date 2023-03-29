@@ -32,6 +32,28 @@ ChatGPTClientAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
 		return PromptCodeReview(grRecord.script);
 	},
 	
+	CodeExplain: function()
+	{
+		var GetStringValue = x_snc_devtools.GetStringValue;
+		var GetRecord = x_snc_devtools.GetRecord;
+		var IsValidRecord = x_snc_devtools.IsValidRecord;
+
+		var strTable = GetStringValue(this.getParameter('sysparm_table'));
+		var strSysId = GetStringValue(this.getParameter('sysparm_sys_id'));
+		
+		if (IsTableSupportedForCodeReview(strTable) == false)
+		{
+			return false;
+		}
+		var grRecord = x_snc_devtools.GetRecord(strTable,strSysId);
+		if (x_snc_devtools.IsValidRecord(grRecord) == false)
+		{
+			return false;
+		}
+
+		return PromptCodeExplain(grRecord.script);
+	},	
+	
 	GetCodeForCodeReview: function()
 	{
 		var GetStringValue = x_snc_devtools.GetStringValue;
@@ -61,13 +83,13 @@ ChatGPTClientAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-03-17 13:52:37</sys_created_on>
         <sys_id>c94db0c3db29a1506a03dad1f39619c6</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>ChatGPTClientAPI</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_script_include_c94db0c3db29a1506a03dad1f39619c6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-17 14:54:43</sys_updated_on>
+        <sys_updated_on>2023-03-29 13:27:16</sys_updated_on>
     </sys_script_include>
 </record_update>
