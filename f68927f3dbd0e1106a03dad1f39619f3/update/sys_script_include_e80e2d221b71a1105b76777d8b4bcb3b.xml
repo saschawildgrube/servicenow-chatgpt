@@ -2,12 +2,12 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_snc_chat_gpt.PromptCodeReview</api_name>
+        <api_name>x_snc_chat_gpt.PromptCodeExplain</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description>Sends a promot to the ChatGPT engine asking for a code review of the given source code.</description>
-        <name>PromptCodeReview</name>
-        <script><![CDATA[function PromptCodeReview(strSourceCode)
+        <description>Sends a promot to the ChatGPT engine asking for what the code does.</description>
+        <name>PromptCodeExplain</name>
+        <script><![CDATA[function PromptCodeExplain(strSourceCode)
 {
 	if (IsActive() == false)
 	{
@@ -25,11 +25,7 @@
 	}
 	
 	var strPrompt = '';
-	strPrompt += 'Find defects, optimize, document and complete the provided source code.\n';
-	strPrompt += 'Undefined functions are NO defects. Please ignore them!\n';
-	strPrompt += 'Use ECMAScript 2009!\n';
-	strPrompt += 'The code runs on a ServiceNow server!\n';
-	strPrompt += 'Do not use single-character variable names!\n';
+	strPrompt += 'Explain the following code.\n';
 	strPrompt += 'Source Code:\n';
 	strPrompt += strSourceCode+'\n';
 	
@@ -43,15 +39,15 @@
 }]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-03-17 07:15:02</sys_created_on>
-        <sys_id>8a136bbedb61a1506a03dad1f396191c</sys_id>
-        <sys_mod_count>13</sys_mod_count>
-        <sys_name>PromptCodeReview</sys_name>
+        <sys_created_on>2023-03-28 14:20:42</sys_created_on>
+        <sys_id>e80e2d221b71a1105b76777d8b4bcb3b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>PromptCodeExplain</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name>sys_script_include_8a136bbedb61a1506a03dad1f396191c</sys_update_name>
+        <sys_update_name>sys_script_include_e80e2d221b71a1105b76777d8b4bcb3b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-28 14:14:57</sys_updated_on>
+        <sys_updated_on>2023-03-28 14:21:24</sys_updated_on>
     </sys_script_include>
 </record_update>
