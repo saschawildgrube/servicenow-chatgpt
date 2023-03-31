@@ -3,9 +3,9 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>false</action_insert>
+        <action_insert>true</action_insert>
         <action_query>false</action_query>
-        <action_update>true</action_update>
+        <action_update>false</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
@@ -18,7 +18,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Conversation Prompt</name>
+        <name>Conversation Insert</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -31,36 +31,41 @@
 
 	var GetStringValue = x_snc_devtools.GetStringValue;
 
-	var strPrompt = GetStringValue(current.prompt);
+	// current.promt and current.getValue('promt') return empty values, hence we use getDisplayValue
+	var strPrompt = GetStringValue(current.getDisplayValue('prompt'));
+	
+	// getDisplayValue however returns the date, time and user of the activity item as the first line. So wen need to strip it off 
+	var aPrompt = strPrompt.split('\n');
+	strPrompt = '';
+	for (var nRow = 1; nRow < aPrompt.length; nRow++)
+	{
+		strPrompt += aPrompt[nRow] + '\n';
+	}
 	
 	if (strPrompt != '')
 	{
-		var strAnswer = ConversationPrompt(current.sys_id,strPrompt);
-		if (strAnswer != false)
-		{
-			current.answer = strAnswer;
-		}
+		ConversationPrompt(current.sys_id,strPrompt);
 	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-09 22:14:38</sys_created_on>
+        <sys_created_on>2023-03-31 16:01:56</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>0777912f1bfc6d105b76777d8b4bcb97</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Conversation Prompt</sys_name>
+        <sys_id>bcf1e56b1b31a550cd6153d16b4bcb77</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Conversation Insert</sys_name>
         <sys_overrides/>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name>sys_script_0777912f1bfc6d105b76777d8b4bcb97</sys_update_name>
+        <sys_update_name>sys_script_bcf1e56b1b31a550cd6153d16b4bcb77</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-31 16:01:18</sys_updated_on>
+        <sys_updated_on>2023-03-31 16:33:34</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>after</when>
         <x_snc_datasilos_created>false</x_snc_datasilos_created>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=0777912f1bfc6d105b76777d8b4bcb97"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=bcf1e56b1b31a550cd6153d16b4bcb77"/>
 </record_update>
