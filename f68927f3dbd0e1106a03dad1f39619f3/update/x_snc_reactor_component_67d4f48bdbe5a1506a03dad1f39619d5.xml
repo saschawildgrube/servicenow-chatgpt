@@ -4,6 +4,7 @@
         <dependencies>9191395fdbd21510f359c191159619ef,acf063451b1469905b76777d8b4bcbb2</dependencies>
         <description>A react component that takes source code and asks ChatGPT to perform a code review.</description>
         <jsx>false</jsx>
+        <module>false</module>
         <name>ChatGPTCodeReview</name>
         <role>controller</role>
         <script><![CDATA[class ChatGPTCodeReview extends ReactorComponent

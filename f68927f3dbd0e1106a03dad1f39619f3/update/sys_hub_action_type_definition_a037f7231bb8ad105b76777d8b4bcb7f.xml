@@ -6,19 +6,24 @@
         <action_template/>
         <active>true</active>
         <annotation>Extracts relevant information from records and asks ChatGPT a question about that information.</annotation>
+        <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
         <copied_from_name/>
         <description>Extracts relevant information from records and asks ChatGPT a question about that information.</description>
+        <flow_priority/>
         <ih_action>false</ih_action>
         <internal_name>ask_question_about_records</internal_name>
         <label_cache>[{"name":"{{action.record}}","label":"action➛Records","type":"action","ref":"","reference_display":"Knowledge","base_type":"glide_list","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.question}}","label":"action➛Question","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.record.Records_0}}","label":"action➛Records (Comma separated Sys Ids)➛Records_0","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.records}}","label":"action➛Records (Comma separated Sys Ids)","type":"action","ref":"kb_knowledge","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"List","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"glide_list","uiUniqueId":"c80f77d5-d4a8-41e1-9f8d-588805e7cdce"}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].answer}}","label":"step➛Script step➛Answer","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"7f452837-4722-495f-aafa-a72171733eb5"}}]</label_cache>
         <master_snapshot>12593fa31bb8ad105b76777d8b4bcbe2</master_snapshot>
+        <master_snapshot_digest/>
         <name>Ask a question about a set of knowledge base articles</name>
         <natlang/>
         <outputs/>
         <outputs/>
+        <pre_compiled>false</pre_compiled>
         <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -26,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a037f7231bb8ad105b76777d8b4bcb7f</sys_id>
-        <sys_mod_count>86</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Ask a question about a set of knowledge base articles</sys_name>
         <sys_overrides/>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
@@ -34,7 +39,7 @@
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a037f7231bb8ad105b76777d8b4bcb7f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-17 15:38:02</sys_updated_on>
+        <sys_updated_on>2024-12-07 22:16:57</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -186,18 +191,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=cb383b631bb8ad105b76777d8b4bcb1d"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>cb383b631bb8ad105b76777d8b4bcb1d</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 09:55:46</sys_created_on>
-        <sys_id>9b383b631bb8ad105b76777d8b4bcb41</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>question</field>
         <id>cb383b631bb8ad105b76777d8b4bcb1d</id>
         <sys_created_by>admin</sys_created_by>
@@ -233,20 +226,9 @@
         <table>var__m_sys_hub_step_ext_input_cb383b631bb8ad105b76777d8b4bcb1d</table>
         <value>{{action.records}}</value>
     </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>cb383b631bb8ad105b76777d8b4bcb1d</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 09:55:46</sys_created_on>
-        <sys_id>53383b631bb8ad105b76777d8b4bcb42</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_cb383b631bb8ad105b76777d8b4bcb1d^id=cb383b631bb8ad105b76777d8b4bcb1d"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=cb383b631bb8ad105b76777d8b4bcb1d"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=cb383b631bb8ad105b76777d8b4bcb1d"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=cb383b631bb8ad105b76777d8b4bcb1d^sys_idNOT IN03383b631bb8ad105b76777d8b4bcb36,e6d8a5491b8525505b76777d8b4bcb40"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -279,6 +261,7 @@
         <element>question</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -325,6 +308,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -360,6 +344,7 @@
         <element>records</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -406,6 +391,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -442,6 +428,7 @@
         <element>answer</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -488,6 +475,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -507,11 +495,11 @@
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>d7383b631bb8ad105b76777d8b4bcb3d</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name/>
+        <sys_name>Answer</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_cb383b631bb8ad105b76777d8b4bcb1d_answer_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-14 15:22:57</sys_updated_on>
         <url/>
@@ -549,6 +537,7 @@
         <element>question</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -595,6 +584,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -631,6 +621,7 @@
         <element>records</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -677,6 +668,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -715,6 +707,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -762,6 +755,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -800,6 +794,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -847,6 +842,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -885,6 +881,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -932,6 +929,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -964,11 +962,11 @@
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>0b383b631bb8ad105b76777d8b4bcb1b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Question</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f_question_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
         <url/>
@@ -987,11 +985,11 @@
         <sys_created_on>2023-02-14 14:47:09</sys_created_on>
         <sys_id>5e41a1811b8525505b76777d8b4bcbac</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Records (Comma separated Sys Ids)</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f_records_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-14 14:47:09</sys_updated_on>
         <url/>
@@ -1012,11 +1010,11 @@
         <sys_created_on>2023-02-10 10:00:32</sys_created_on>
         <sys_id>0d59fba31bb8ad105b76777d8b4bcbcf</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-10 10:00:32</sys_updated_on>
         <url/>
@@ -1035,11 +1033,11 @@
         <sys_created_on>2023-02-10 10:00:32</sys_created_on>
         <sys_id>8159fba31bb8ad105b76777d8b4bcbc9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f___action_status___en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-10 10:00:32</sys_updated_on>
         <url/>
@@ -1058,11 +1056,11 @@
         <sys_created_on>2023-02-10 09:55:46</sys_created_on>
         <sys_id>df383b631bb8ad105b76777d8b4bcb4a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Answer</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f_variable_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
         <url/>
@@ -1091,11 +1089,14 @@
         <action_status/>
         <action_template/>
         <annotation>Extracts relevant information from records and asks ChatGPT a question about that information.</annotation>
+        <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
         <copied_from_name/>
         <description>Extracts relevant information from records and asks ChatGPT a question about that information.</description>
+        <flow_priority/>
         <internal_name>ask_question_about_knowledge_base_article</internal_name>
         <label_cache>[{"name":"{{action.record}}","label":"action➛Records","type":"action","ref":"","reference_display":"Knowledge","base_type":"glide_list","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.question}}","label":"action➛Question","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.record.Records_0}}","label":"action➛Records (Comma separated Sys Ids)➛Records_0","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.records}}","label":"action➛Records (Comma separated Sys Ids)","type":"action","ref":"kb_knowledge","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"List","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"glide_list","uiUniqueId":"c80f77d5-d4a8-41e1-9f8d-588805e7cdce"}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[954a84ae-9b66-4c3e-bb2b-48383e9f963c].answer}}","label":"step➛Script step➛Answer","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"7f452837-4722-495f-aafa-a72171733eb5"}}]</label_cache>
         <master>true</master>
@@ -1270,18 +1271,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=1a597fa31bb8ad105b76777d8b4bcb17"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>1a597fa31bb8ad105b76777d8b4bcb17</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 10:00:38</sys_created_on>
-        <sys_id>1e597fa31bb8ad105b76777d8b4bcb37</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>question</field>
         <id>1a597fa31bb8ad105b76777d8b4bcb17</id>
         <sys_created_by>admin</sys_created_by>
@@ -1317,20 +1306,9 @@
         <table>var__m_sys_hub_step_ext_input_1a597fa31bb8ad105b76777d8b4bcb17</table>
         <value>{{action.records}}</value>
     </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>1a597fa31bb8ad105b76777d8b4bcb17</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-10 10:00:38</sys_created_on>
-        <sys_id>de597fa31bb8ad105b76777d8b4bcb37</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_1a597fa31bb8ad105b76777d8b4bcb17^id=1a597fa31bb8ad105b76777d8b4bcb17"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=1a597fa31bb8ad105b76777d8b4bcb17"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=1a597fa31bb8ad105b76777d8b4bcb17"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=1a597fa31bb8ad105b76777d8b4bcb17^sys_idNOT INd6597fa31bb8ad105b76777d8b4bcb1f,fdb7d87d1b81e5505b76777d8b4bcb9e"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -1363,6 +1341,7 @@
         <element>question</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1409,6 +1388,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1444,6 +1424,7 @@
         <element>records</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1490,6 +1471,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1526,6 +1508,7 @@
         <element>answer</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1572,6 +1555,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1591,11 +1575,11 @@
         <sys_created_on>2023-02-10 10:00:38</sys_created_on>
         <sys_id>9e597fa31bb8ad105b76777d8b4bcb33</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name/>
+        <sys_name>Answer</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_1a597fa31bb8ad105b76777d8b4bcb17_answer_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-16 17:21:09</sys_updated_on>
         <url/>
@@ -1633,6 +1617,7 @@
         <element>question</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1679,6 +1664,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1715,6 +1701,7 @@
         <element>records</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1761,6 +1748,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1799,6 +1787,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1846,6 +1835,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1884,6 +1874,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1931,6 +1922,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1969,6 +1961,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -2016,6 +2009,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2048,11 +2042,11 @@
         <sys_created_on>2023-02-10 10:00:37</sys_created_on>
         <sys_id>16593fa31bb8ad105b76777d8b4bcbf0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Question</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_12593fa31bb8ad105b76777d8b4bcbe2_question_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-10 10:00:37</sys_updated_on>
         <url/>
@@ -2071,11 +2065,11 @@
         <sys_created_on>2023-02-16 17:21:09</sys_created_on>
         <sys_id>3db7d87d1b81e5505b76777d8b4bcb5d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Records (Comma separated Sys Ids)</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_12593fa31bb8ad105b76777d8b4bcbe2_records_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-16 17:21:09</sys_updated_on>
         <url/>
@@ -2096,11 +2090,11 @@
         <sys_created_on>2023-02-10 10:00:38</sys_created_on>
         <sys_id>6e597fa31bb8ad105b76777d8b4bcb7c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_12593fa31bb8ad105b76777d8b4bcbe2___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
         <url/>
@@ -2119,11 +2113,11 @@
         <sys_created_on>2023-02-10 10:00:38</sys_created_on>
         <sys_id>a6597fa31bb8ad105b76777d8b4bcb5d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_12593fa31bb8ad105b76777d8b4bcbe2___action_status___en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
         <url/>
@@ -2142,11 +2136,11 @@
         <sys_created_on>2023-02-10 10:00:38</sys_created_on>
         <sys_id>ae597fa31bb8ad105b76777d8b4bcb58</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Answer</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_12593fa31bb8ad105b76777d8b4bcbe2_variable_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
         <url/>

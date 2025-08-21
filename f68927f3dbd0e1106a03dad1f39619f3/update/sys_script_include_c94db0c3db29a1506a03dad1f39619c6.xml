@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>true</client_callable>
         <description>Provides access to server sided capabilities to the client.</description>
+        <mobile_callable>false</mobile_callable>
         <name>ChatGPTClientAPI</name>
+        <sandbox_callable>true</sandbox_callable>
         <script><![CDATA[var ChatGPTClientAPI = Class.create();
 ChatGPTClientAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
 {
@@ -91,5 +93,6 @@ ChatGPTClientAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
         <sys_update_name>sys_script_include_c94db0c3db29a1506a03dad1f39619c6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-03-29 13:27:16</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

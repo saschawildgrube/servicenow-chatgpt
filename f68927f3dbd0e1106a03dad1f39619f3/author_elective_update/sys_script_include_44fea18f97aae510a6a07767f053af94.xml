@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_chat_gpt.DevToolsGetInstancePipelineName</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>The function DevToolsGetInstancePipelineName is called by the DevTools extension point instance class and returns the pipeline name of an instance based on the given actual name.</description>
+        <name>DevToolsGetInstancePipelineName</name>
+        <script><![CDATA[function DevToolsGetInstancePipelineName(strInstanceName)
+{
+	// TODO: Create the specific mapping of instance names to pipeline instance names...
+	
+	switch (strInstanceName)
+	{
+		case 'acme':
+			return 'prod';
+		case 'acmetest':
+			return 'test';
+		case 'acmedev':
+			return 'dev';
+		default:
+			return '';
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-06 10:28:49</sys_created_on>
+        <sys_id>44fea18f97aae510a6a07767f053af94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevToolsGetInstancePipelineName</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_update_name>sys_script_include_44fea18f97aae510a6a07767f053af94</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-06 10:28:49</sys_updated_on>
+    </sys_script_include>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</application>
+        <file_path/>
+        <instance_id>220092723b73421816e44a8aa4e45ab1</instance_id>
+        <instance_name>wildxanadu</instance_name>
+        <name>sys_script_include_44fea18f97aae510a6a07767f053af94</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;
+    &lt;sys_script_include action="INSERT_OR_UPDATE"&gt;
+        &lt;access&gt;public&lt;/access&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;api_name&gt;x_snc_chat_gpt.DevToolsGetInstancePipelineName&lt;/api_name&gt;
+        &lt;caller_access&gt;1&lt;/caller_access&gt;
+        &lt;client_callable&gt;false&lt;/client_callable&gt;
+        &lt;description&gt;The function DevToolsGetInstancePipelineName is called by the DevTools extension point instance class and returns the pipeline name of an instance based on the given actual name.&lt;/description&gt;
+        &lt;name&gt;DevToolsGetInstancePipelineName&lt;/name&gt;
+        &lt;script&gt;&lt;![CDATA[function DevToolsGetInstancePipelineName(strInstanceName)
+{
+	// TODO: Create the specific mapping of instance names to pipeline instance names...
+	
+	switch (strInstanceName)
+	{
+		case 'acme':
+			return 'prod';
+		case 'acmetest':
+			return 'test';
+		case 'acmedev':
+			return 'dev';
+		default:
+			return '';
+	}
+}]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-05-06 10:28:49&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;44fea18f97aae510a6a07767f053af94&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;DevToolsGetInstancePipelineName&lt;/sys_name&gt;
+        &lt;sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt"&gt;f68927f3dbd0e1106a03dad1f39619f3&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="ChatGPT WORK IN PROGRESS"&gt;f68927f3dbd0e1106a03dad1f39619f3&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_include_44fea18f97aae510a6a07767f053af94&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-05-06 10:28:49&lt;/sys_updated_on&gt;
+    &lt;/sys_script_include&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>1734719373</payload_hash>
+        <record_name>DevToolsGetInstancePipelineName</record_name>
+        <reverted_from/>
+        <source>acb41c5693da1210ae97b4aa6aba109b</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-07 22:16:59</sys_created_on>
+        <sys_id>0eb4dc5693da1210ae97b4aa6aba108a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193a3328bd40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-07 22:16:59</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>cab4dc56a2da12104b2573edc33d438a</update_guid>
+        <update_guid_history>cab4dc56a2da12104b2573edc33d438a:1734719373</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-11 08:18:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>98705faca30942e880d465ac5de3f240</sys_id>
+        <sys_metadata>44fea18f97aae510a6a07767f053af94</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevToolsGetInstancePipelineName</sys_name>
+        <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+        <sys_scope_delete display_value="">4a5158d7872e472a971abc65c818cda4</sys_scope_delete>
+        <sys_update_name>sys_script_include_44fea18f97aae510a6a07767f053af94</sys_update_name>
+        <sys_update_version display_value="sys_script_include_44fea18f97aae510a6a07767f053af94">0eb4dc5693da1210ae97b4aa6aba108a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-11 08:18:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

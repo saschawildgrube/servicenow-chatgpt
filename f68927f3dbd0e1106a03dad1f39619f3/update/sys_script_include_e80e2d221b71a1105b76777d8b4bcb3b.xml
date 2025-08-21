@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Sends a promot to the ChatGPT engine asking for what the code does.</description>
+        <mobile_callable>false</mobile_callable>
         <name>PromptCodeExplain</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function PromptCodeExplain(strSourceCode)
 {
 	if (IsActive() == false)
@@ -49,5 +51,6 @@
         <sys_update_name>sys_script_include_e80e2d221b71a1105b76777d8b4bcb3b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-03-28 14:21:24</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

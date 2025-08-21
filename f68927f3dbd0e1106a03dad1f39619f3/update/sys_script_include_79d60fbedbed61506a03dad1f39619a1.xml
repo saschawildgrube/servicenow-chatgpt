@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Renders the Code Review page.</description>
+        <mobile_callable>false</mobile_callable>
         <name>HtmlRenderPageCodeReview</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function HtmlRenderPageCodeReview()
 {
 	var GetParam = x_snc_devtools.GetParam;
@@ -83,5 +85,6 @@
         <sys_update_name>sys_script_include_79d60fbedbed61506a03dad1f39619a1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-05-29 08:55:46</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Sends a prompt to the ChatGPT engine using a given conversation as context.</description>
+        <mobile_callable>false</mobile_callable>
         <name>ConversationPrompt</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function ConversationPrompt(vConversation, strPrompt)
 {
 	if (IsActive() == false)
@@ -84,5 +86,6 @@
         <sys_update_name>sys_script_include_aa976ce3dbfcad106a03dad1f39619fb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-09 22:17:18</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

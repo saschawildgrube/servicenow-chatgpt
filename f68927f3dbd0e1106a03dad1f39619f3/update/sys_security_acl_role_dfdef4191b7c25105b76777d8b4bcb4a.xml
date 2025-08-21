@@ -14,6 +14,5 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-02 20:39:32</sys_updated_on>
         <sys_user_role display_value="x_snc_chat_gpt.user" name="x_snc_chat_gpt.user">dfdef4191b7c25105b76777d8b4bcb30</sys_user_role>
-        <transaction_id/>
     </sys_security_acl_role>
 </record_update>

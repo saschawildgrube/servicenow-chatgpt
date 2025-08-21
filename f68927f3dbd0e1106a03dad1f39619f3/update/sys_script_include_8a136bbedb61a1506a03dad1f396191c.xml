@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Sends a promot to the ChatGPT engine asking for a code review of the given source code.</description>
+        <mobile_callable>false</mobile_callable>
         <name>PromptCodeReview</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function PromptCodeReview(strSourceCode)
 {
 	if (IsActive() == false)
@@ -53,5 +55,6 @@
         <sys_update_name>sys_script_include_8a136bbedb61a1506a03dad1f396191c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-03-28 14:14:57</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

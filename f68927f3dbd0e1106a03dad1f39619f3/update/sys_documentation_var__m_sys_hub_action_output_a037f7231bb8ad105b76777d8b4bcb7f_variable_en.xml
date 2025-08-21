@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="variable" label="Answer" language="en" table="var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>variable</element>
+            <help/>
+            <hint/>
+            <label>Answer</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-10 09:55:46</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Answer</sys_name>
+            <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f_variable_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-10 09:55:46</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

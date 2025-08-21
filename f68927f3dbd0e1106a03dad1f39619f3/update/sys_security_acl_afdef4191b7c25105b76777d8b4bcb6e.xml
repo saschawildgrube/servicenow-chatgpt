@@ -3,11 +3,15 @@
         <active>true</active>
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
+        <applies_to/>
         <condition/>
+        <decision_type>allow</decision_type>
         <description>Default access control on x_snc_chat_gpt_conversation</description>
+        <local_or_existing/>
         <name>x_snc_chat_gpt_conversation</name>
         <operation display_value="write">write</operation>
         <script/>
+        <security_attribute/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-02 20:39:33</sys_created_on>

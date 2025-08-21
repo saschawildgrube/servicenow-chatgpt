@@ -4,6 +4,7 @@
         <dependencies>67d4f48bdbe5a1506a03dad1f39619d5</dependencies>
         <description>The main ChatGPT application reactor component.</description>
         <jsx>false</jsx>
+        <module>false</module>
         <name>ChatGPTApp</name>
         <role>app</role>
         <script><![CDATA[class ChatGPTApp extends ReactorComponent
