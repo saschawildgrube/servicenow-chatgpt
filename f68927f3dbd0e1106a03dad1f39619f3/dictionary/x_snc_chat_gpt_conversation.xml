@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" db_object_id="3cb41c5693da1210ae97b4aa6aba10b0" label="ChatGPT Conversation" max_length="40" name="x_snc_chat_gpt_conversation" type="collection">
+    <element audit="true" db_object_id="c6121d8d2bfc2a109083fe395e91bfb6" label="ChatGPT Conversation" max_length="40" name="x_snc_chat_gpt_conversation" type="collection">
+        <element display="true" label="Title" max_length="200" name="title" read_only="true" type="string"/>
+        <element label="Context" max_length="10000" name="context" read_only="true" type="string"/>
         <element label="New Prompt" max_length="4000" name="new_prompt" read_only="true" type="string"/>
         <element label="Answer" max_length="4000" name="answer" read_only="true" type="journal_input"/>
         <element label="Prompt" max_length="4000" name="prompt" type="journal_input"/>
-        <element display="true" label="Title" max_length="200" name="title" read_only="true" type="string"/>
-        <element label="Context" max_length="10000" name="context" read_only="true" type="string"/>
     </element>
 </database>

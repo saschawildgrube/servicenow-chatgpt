@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>A user that can have conversations with ChatGPT.</description>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>mSwe+hkKTi1dcKV9/y6mAP3Hxq/CI6nAHwEZDeQLcag=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_chat_gpt.user</name>

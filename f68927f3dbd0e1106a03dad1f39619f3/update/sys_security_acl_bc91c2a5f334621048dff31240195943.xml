@@ -15,16 +15,16 @@
         <security_attribute display_value="SAC_91389587">bc91c2a5f334621048dff31555244386</security_attribute>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>@@snc_write_audit@@</sys_created_by>
-        <sys_created_on>2025-05-10 04:32:04</sys_created_on>
-        <sys_id>bc91c2a5f334621048dff3d787233823</sys_id>
+        <sys_created_on>2025-05-10 04:51:31</sys_created_on>
+        <sys_id>bc91c2a5f334621048dff31240195943</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_chat_gpt_conversation.*</sys_name>
         <sys_package display_value="ChatGPT WORK IN PROGRESS" source="x_snc_chat_gpt">f68927f3dbd0e1106a03dad1f39619f3</sys_package>
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
-        <sys_update_name>sys_security_acl_bc91c2a5f334621048dff3d787233823</sys_update_name>
+        <sys_update_name>sys_security_acl_bc91c2a5f334621048dff31240195943</sys_update_name>
         <sys_updated_by>@@snc_write_audit@@</sys_updated_by>
-        <sys_updated_on>2025-05-10 04:32:04</sys_updated_on>
+        <sys_updated_on>2025-05-10 04:51:31</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

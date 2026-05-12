@@ -38,8 +38,8 @@
         <sys_policy/>
         <sys_scope display_value="ChatGPT WORK IN PROGRESS">f68927f3dbd0e1106a03dad1f39619f3</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a037f7231bb8ad105b76777d8b4bcb7f</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-07 22:16:57</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-08-21 10:28:16</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -481,7 +481,6 @@
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
     <sys_hub_input_scripts action="delete_multiple" query="instance=cb383b631bb8ad105b76777d8b4bcb1d"/>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_cb383b631bb8ad105b76777d8b4bcb1d^sys_idNOT INd7383b631bb8ad105b76777d8b4bcb3d"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>answer</element>
         <help/>
@@ -948,7 +947,6 @@
         <sys_updated_on>2023-02-10 09:55:47</sys_updated_on>
     </sys_hub_action_status_metadata>
     <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=9f383b631bb8ad105b76777d8b4bcb4d"/>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN0b383b631bb8ad105b76777d8b4bcb1b,5e41a1811b8525505b76777d8b4bcbac"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>question</element>
         <help/>
@@ -996,7 +994,6 @@
         <url_target/>
     </sys_documentation>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_a037f7231bb8ad105b76777d8b4bcb7f"/>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_a037f7231bb8ad105b76777d8b4bcb7f^sys_idNOT IN0d59fba31bb8ad105b76777d8b4bcbcf,8159fba31bb8ad105b76777d8b4bcbc9,df383b631bb8ad105b76777d8b4bcb4a"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>__dont_treat_as_error__</element>
         <help/>
@@ -1561,7 +1558,6 @@
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
     <sys_hub_input_scripts action="delete_multiple" query="instance=1a597fa31bb8ad105b76777d8b4bcb17"/>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_1a597fa31bb8ad105b76777d8b4bcb17^sys_idNOT IN9e597fa31bb8ad105b76777d8b4bcb33"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>answer</element>
         <help/>
@@ -2028,7 +2024,6 @@
         <sys_updated_on>2023-02-10 10:00:38</sys_updated_on>
     </sys_hub_action_status_metadata>
     <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=a2597fa31bb8ad105b76777d8b4bcb82"/>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT IN16593fa31bb8ad105b76777d8b4bcbf0,3db7d87d1b81e5505b76777d8b4bcb5d"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>question</element>
         <help/>
@@ -2076,7 +2071,6 @@
         <url_target/>
     </sys_documentation>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_12593fa31bb8ad105b76777d8b4bcbe2"/>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_12593fa31bb8ad105b76777d8b4bcbe2^sys_idNOT IN6e597fa31bb8ad105b76777d8b4bcb7c,a6597fa31bb8ad105b76777d8b4bcb5d,ae597fa31bb8ad105b76777d8b4bcb58"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>__dont_treat_as_error__</element>
         <help/>

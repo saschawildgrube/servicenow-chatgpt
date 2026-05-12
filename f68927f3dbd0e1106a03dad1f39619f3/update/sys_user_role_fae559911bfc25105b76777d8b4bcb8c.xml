@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>A user that can administrate the ChatGPT application and has access to all conversations.</description>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>OU16+HKV8eTKNMwmDlsG2bGYMoG13WeAOlRnk6eKr94=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_chat_gpt.admin</name>
